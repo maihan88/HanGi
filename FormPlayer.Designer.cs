@@ -1,0 +1,523 @@
+﻿namespace HaNgi
+{
+    partial class FormPlayer
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPlayer));
+            this.timer = new Sunny.UI.UIMillisecondTimer(this.components);
+            this.pnlBottomControls = new Sunny.UI.UIPanel();
+            this.trackVolume = new Sunny.UI.UITrackBar();
+            this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
+            this.btnSettings = new Sunny.UI.UISymbolButton();
+            this.btnLoop = new Sunny.UI.UISymbolButton();
+            this.btnNext = new Sunny.UI.UISymbolButton();
+            this.btnPlayPause = new Sunny.UI.UISymbolButton();
+            this.btnPrevious = new Sunny.UI.UISymbolButton();
+            this.btnShuffle = new Sunny.UI.UISymbolButton();
+            this.lblTotalTime = new Sunny.UI.UILabel();
+            this.lblCurrentTime = new Sunny.UI.UILabel();
+            this.trackProgress = new Sunny.UI.UITrackBar();
+            this.pnlQueue = new Sunny.UI.UIPanel();
+            this.lstNowPlayingQueue = new Sunny.UI.UIListBox();
+            this.uiLabel1 = new Sunny.UI.UILabel();
+            this.pnlRightInfo = new Sunny.UI.UIPanel();
+            this.uiTabControl1 = new Sunny.UI.UITabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.avatarInfo = new Sunny.UI.UIAvatar();
+            this.lblInfoSongName = new Sunny.UI.UILabel();
+            this.lblInfoArtist = new Sunny.UI.UILabel();
+            this.txtLyrics = new Sunny.UI.UIRichTextBox();
+            this.pnlCenterDisplay = new Sunny.UI.UIPanel();
+            this.avatarCenterDisplay = new Sunny.UI.UIAvatar();
+            this.wmp = new AxWMPLib.AxWindowsMediaPlayer();
+            this.pnlBottomControls.SuspendLayout();
+            this.pnlQueue.SuspendLayout();
+            this.pnlRightInfo.SuspendLayout();
+            this.uiTabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.pnlCenterDisplay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wmp)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // timer
+            // 
+            this.timer.Interval = 500;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // pnlBottomControls
+            // 
+            this.pnlBottomControls.Controls.Add(this.trackVolume);
+            this.pnlBottomControls.Controls.Add(this.uiSymbolButton1);
+            this.pnlBottomControls.Controls.Add(this.btnSettings);
+            this.pnlBottomControls.Controls.Add(this.btnLoop);
+            this.pnlBottomControls.Controls.Add(this.btnNext);
+            this.pnlBottomControls.Controls.Add(this.btnPlayPause);
+            this.pnlBottomControls.Controls.Add(this.btnPrevious);
+            this.pnlBottomControls.Controls.Add(this.btnShuffle);
+            this.pnlBottomControls.Controls.Add(this.lblTotalTime);
+            this.pnlBottomControls.Controls.Add(this.lblCurrentTime);
+            this.pnlBottomControls.Controls.Add(this.trackProgress);
+            this.pnlBottomControls.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBottomControls.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlBottomControls.Location = new System.Drawing.Point(0, 476);
+            this.pnlBottomControls.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlBottomControls.MinimumSize = new System.Drawing.Size(1, 1);
+            this.pnlBottomControls.Name = "pnlBottomControls";
+            this.pnlBottomControls.Size = new System.Drawing.Size(973, 189);
+            this.pnlBottomControls.TabIndex = 1;
+            this.pnlBottomControls.Text = null;
+            this.pnlBottomControls.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // trackVolume
+            // 
+            this.trackVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.trackVolume.Location = new System.Drawing.Point(61, 8);
+            this.trackVolume.MinimumSize = new System.Drawing.Size(1, 1);
+            this.trackVolume.Name = "trackVolume";
+            this.trackVolume.Size = new System.Drawing.Size(113, 29);
+            this.trackVolume.TabIndex = 10;
+            this.trackVolume.Text = "uiTrackBar1";
+            this.trackVolume.ValueChanged += new System.EventHandler(this.trackVolume_ValueChanged);
+            // 
+            // uiSymbolButton1
+            // 
+            this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiSymbolButton1.FillColor = System.Drawing.Color.Transparent;
+            this.uiSymbolButton1.FillColor2 = System.Drawing.Color.Transparent;
+            this.uiSymbolButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiSymbolButton1.ForeColor = System.Drawing.Color.Black;
+            this.uiSymbolButton1.Location = new System.Drawing.Point(5, 3);
+            this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolButton1.Name = "uiSymbolButton1";
+            this.uiSymbolButton1.RectColor = System.Drawing.Color.Transparent;
+            this.uiSymbolButton1.Size = new System.Drawing.Size(50, 50);
+            this.uiSymbolButton1.Symbol = 57449;
+            this.uiSymbolButton1.SymbolColor = System.Drawing.Color.Black;
+            this.uiSymbolButton1.SymbolSize = 35;
+            this.uiSymbolButton1.TabIndex = 9;
+            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSettings.FillColor = System.Drawing.Color.Transparent;
+            this.btnSettings.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnSettings.ForeColor = System.Drawing.Color.Black;
+            this.btnSettings.Location = new System.Drawing.Point(911, 127);
+            this.btnSettings.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.RectColor = System.Drawing.Color.Transparent;
+            this.btnSettings.Size = new System.Drawing.Size(50, 50);
+            this.btnSettings.Symbol = 61459;
+            this.btnSettings.SymbolColor = System.Drawing.Color.Black;
+            this.btnSettings.SymbolSize = 35;
+            this.btnSettings.TabIndex = 8;
+            this.btnSettings.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btnLoop
+            // 
+            this.btnLoop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoop.FillColor = System.Drawing.Color.Transparent;
+            this.btnLoop.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnLoop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnLoop.ForeColor = System.Drawing.Color.Black;
+            this.btnLoop.Location = new System.Drawing.Point(724, 94);
+            this.btnLoop.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnLoop.Name = "btnLoop";
+            this.btnLoop.RectColor = System.Drawing.Color.Transparent;
+            this.btnLoop.Size = new System.Drawing.Size(50, 50);
+            this.btnLoop.Symbol = 557408;
+            this.btnLoop.SymbolColor = System.Drawing.Color.Black;
+            this.btnLoop.SymbolSize = 35;
+            this.btnLoop.TabIndex = 7;
+            this.btnLoop.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnLoop.Click += new System.EventHandler(this.btnLoop_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext.FillColor = System.Drawing.Color.Transparent;
+            this.btnNext.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnNext.ForeColor = System.Drawing.Color.Black;
+            this.btnNext.Location = new System.Drawing.Point(603, 94);
+            this.btnNext.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.RectColor = System.Drawing.Color.Transparent;
+            this.btnNext.Size = new System.Drawing.Size(50, 50);
+            this.btnNext.Symbol = 61518;
+            this.btnNext.SymbolColor = System.Drawing.Color.Black;
+            this.btnNext.SymbolSize = 35;
+            this.btnNext.TabIndex = 6;
+            this.btnNext.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPlayPause
+            // 
+            this.btnPlayPause.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlayPause.FillColor = System.Drawing.Color.Transparent;
+            this.btnPlayPause.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnPlayPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPlayPause.ForeColor = System.Drawing.Color.Black;
+            this.btnPlayPause.Location = new System.Drawing.Point(478, 94);
+            this.btnPlayPause.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnPlayPause.Name = "btnPlayPause";
+            this.btnPlayPause.RectColor = System.Drawing.Color.Transparent;
+            this.btnPlayPause.Size = new System.Drawing.Size(50, 50);
+            this.btnPlayPause.Symbol = 61515;
+            this.btnPlayPause.SymbolColor = System.Drawing.Color.Black;
+            this.btnPlayPause.SymbolSize = 35;
+            this.btnPlayPause.TabIndex = 5;
+            this.btnPlayPause.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnPlayPause.Click += new System.EventHandler(this.btnPlayPause_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrevious.FillColor = System.Drawing.Color.Transparent;
+            this.btnPrevious.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPrevious.ForeColor = System.Drawing.Color.Black;
+            this.btnPrevious.Location = new System.Drawing.Point(340, 94);
+            this.btnPrevious.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.RectColor = System.Drawing.Color.Transparent;
+            this.btnPrevious.Size = new System.Drawing.Size(50, 50);
+            this.btnPrevious.Symbol = 61514;
+            this.btnPrevious.SymbolColor = System.Drawing.Color.Black;
+            this.btnPrevious.SymbolSize = 35;
+            this.btnPrevious.TabIndex = 4;
+            this.btnPrevious.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // btnShuffle
+            // 
+            this.btnShuffle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShuffle.FillColor = System.Drawing.Color.Transparent;
+            this.btnShuffle.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnShuffle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnShuffle.ForeColor = System.Drawing.Color.Black;
+            this.btnShuffle.Location = new System.Drawing.Point(213, 94);
+            this.btnShuffle.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnShuffle.Name = "btnShuffle";
+            this.btnShuffle.RectColor = System.Drawing.Color.Transparent;
+            this.btnShuffle.Size = new System.Drawing.Size(50, 50);
+            this.btnShuffle.Symbol = 361556;
+            this.btnShuffle.SymbolColor = System.Drawing.Color.Black;
+            this.btnShuffle.SymbolSize = 35;
+            this.btnShuffle.TabIndex = 3;
+            this.btnShuffle.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnShuffle.Click += new System.EventHandler(this.btnShuffle_Click);
+            // 
+            // lblTotalTime
+            // 
+            this.lblTotalTime.AutoSize = true;
+            this.lblTotalTime.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.lblTotalTime.Location = new System.Drawing.Point(722, 23);
+            this.lblTotalTime.Name = "lblTotalTime";
+            this.lblTotalTime.Size = new System.Drawing.Size(68, 28);
+            this.lblTotalTime.TabIndex = 2;
+            this.lblTotalTime.Text = "00:00";
+            // 
+            // lblCurrentTime
+            // 
+            this.lblCurrentTime.AutoSize = true;
+            this.lblCurrentTime.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.lblCurrentTime.Location = new System.Drawing.Point(195, 24);
+            this.lblCurrentTime.Name = "lblCurrentTime";
+            this.lblCurrentTime.Size = new System.Drawing.Size(68, 28);
+            this.lblCurrentTime.TabIndex = 1;
+            this.lblCurrentTime.Text = "00:00";
+            // 
+            // trackProgress
+            // 
+            this.trackProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.trackProgress.Location = new System.Drawing.Point(269, 23);
+            this.trackProgress.MinimumSize = new System.Drawing.Size(1, 1);
+            this.trackProgress.Name = "trackProgress";
+            this.trackProgress.Size = new System.Drawing.Size(447, 29);
+            this.trackProgress.TabIndex = 0;
+            this.trackProgress.Text = "uiTrackBar1";
+            this.trackProgress.ValueChanged += new System.EventHandler(this.trackProgress_ValueChanged);
+            // 
+            // pnlQueue
+            // 
+            this.pnlQueue.Controls.Add(this.lstNowPlayingQueue);
+            this.pnlQueue.Controls.Add(this.uiLabel1);
+            this.pnlQueue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlQueue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlQueue.Location = new System.Drawing.Point(0, 0);
+            this.pnlQueue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlQueue.MinimumSize = new System.Drawing.Size(1, 1);
+            this.pnlQueue.Name = "pnlQueue";
+            this.pnlQueue.Size = new System.Drawing.Size(239, 476);
+            this.pnlQueue.TabIndex = 2;
+            this.pnlQueue.Text = "uiPanel1";
+            this.pnlQueue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlQueue.Visible = false;
+            // 
+            // lstNowPlayingQueue
+            // 
+            this.lstNowPlayingQueue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstNowPlayingQueue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lstNowPlayingQueue.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.lstNowPlayingQueue.ItemSelectForeColor = System.Drawing.Color.White;
+            this.lstNowPlayingQueue.Location = new System.Drawing.Point(0, 31);
+            this.lstNowPlayingQueue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lstNowPlayingQueue.MinimumSize = new System.Drawing.Size(1, 1);
+            this.lstNowPlayingQueue.Name = "lstNowPlayingQueue";
+            this.lstNowPlayingQueue.Padding = new System.Windows.Forms.Padding(2);
+            this.lstNowPlayingQueue.ShowText = false;
+            this.lstNowPlayingQueue.Size = new System.Drawing.Size(239, 445);
+            this.lstNowPlayingQueue.TabIndex = 1;
+            this.lstNowPlayingQueue.Text = "uiListBox1";
+            this.lstNowPlayingQueue.DoubleClick += new System.EventHandler(this.lstNowPlayingQueue_DoubleClick);
+            // 
+            // uiLabel1
+            // 
+            this.uiLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uiLabel1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.uiLabel1.Location = new System.Drawing.Point(0, 0);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(239, 31);
+            this.uiLabel1.TabIndex = 0;
+            this.uiLabel1.Text = "Danh sách phát";
+            // 
+            // pnlRightInfo
+            // 
+            this.pnlRightInfo.Controls.Add(this.uiTabControl1);
+            this.pnlRightInfo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlRightInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlRightInfo.Location = new System.Drawing.Point(724, 0);
+            this.pnlRightInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlRightInfo.MinimumSize = new System.Drawing.Size(1, 1);
+            this.pnlRightInfo.Name = "pnlRightInfo";
+            this.pnlRightInfo.Size = new System.Drawing.Size(249, 476);
+            this.pnlRightInfo.TabIndex = 3;
+            this.pnlRightInfo.Text = "uiPanel1";
+            this.pnlRightInfo.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiTabControl1
+            // 
+            this.uiTabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.uiTabControl1.Controls.Add(this.tabPage1);
+            this.uiTabControl1.Controls.Add(this.tabPage2);
+            this.uiTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.uiTabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiTabControl1.ItemSize = new System.Drawing.Size(123, 40);
+            this.uiTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.uiTabControl1.MainPage = "";
+            this.uiTabControl1.Name = "uiTabControl1";
+            this.uiTabControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.uiTabControl1.SelectedIndex = 0;
+            this.uiTabControl1.Size = new System.Drawing.Size(249, 476);
+            this.uiTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.uiTabControl1.TabIndex = 0;
+            this.uiTabControl1.TabPageTextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.uiTabControl1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.lblInfoArtist);
+            this.tabPage1.Controls.Add(this.lblInfoSongName);
+            this.tabPage1.Controls.Add(this.avatarInfo);
+            this.tabPage1.Location = new System.Drawing.Point(0, 0);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(249, 436);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Thông tin";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.txtLyrics);
+            this.tabPage2.Location = new System.Drawing.Point(0, 0);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(249, 436);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Lời bài hát";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // avatarInfo
+            // 
+            this.avatarInfo.AvatarSize = 150;
+            this.avatarInfo.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.avatarInfo.FillColor = System.Drawing.Color.Transparent;
+            this.avatarInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.avatarInfo.Icon = Sunny.UI.UIAvatar.UIIcon.Image;
+            this.avatarInfo.Location = new System.Drawing.Point(52, 31);
+            this.avatarInfo.MinimumSize = new System.Drawing.Size(1, 1);
+            this.avatarInfo.Name = "avatarInfo";
+            this.avatarInfo.Shape = Sunny.UI.UIShape.Square;
+            this.avatarInfo.Size = new System.Drawing.Size(150, 150);
+            this.avatarInfo.TabIndex = 0;
+            // 
+            // lblInfoSongName
+            // 
+            this.lblInfoSongName.AutoSize = true;
+            this.lblInfoSongName.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoSongName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.lblInfoSongName.Location = new System.Drawing.Point(65, 226);
+            this.lblInfoSongName.Name = "lblInfoSongName";
+            this.lblInfoSongName.Size = new System.Drawing.Size(123, 28);
+            this.lblInfoSongName.TabIndex = 1;
+            this.lblInfoSongName.Text = "Tên bài hát";
+            this.lblInfoSongName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblInfoArtist
+            // 
+            this.lblInfoArtist.AutoSize = true;
+            this.lblInfoArtist.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoArtist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.lblInfoArtist.Location = new System.Drawing.Point(85, 280);
+            this.lblInfoArtist.Name = "lblInfoArtist";
+            this.lblInfoArtist.Size = new System.Drawing.Size(88, 28);
+            this.lblInfoArtist.TabIndex = 2;
+            this.lblInfoArtist.Text = "Nghệ sĩ";
+            this.lblInfoArtist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtLyrics
+            // 
+            this.txtLyrics.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtLyrics.FillColor = System.Drawing.Color.White;
+            this.txtLyrics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtLyrics.Location = new System.Drawing.Point(0, 0);
+            this.txtLyrics.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLyrics.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtLyrics.Name = "txtLyrics";
+            this.txtLyrics.Padding = new System.Windows.Forms.Padding(2);
+            this.txtLyrics.ReadOnly = true;
+            this.txtLyrics.ShowText = false;
+            this.txtLyrics.Size = new System.Drawing.Size(249, 436);
+            this.txtLyrics.TabIndex = 0;
+            this.txtLyrics.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            // 
+            // pnlCenterDisplay
+            // 
+            this.pnlCenterDisplay.Controls.Add(this.avatarCenterDisplay);
+            this.pnlCenterDisplay.Controls.Add(this.wmp);
+            this.pnlCenterDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCenterDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pnlCenterDisplay.Location = new System.Drawing.Point(239, 0);
+            this.pnlCenterDisplay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlCenterDisplay.MinimumSize = new System.Drawing.Size(1, 1);
+            this.pnlCenterDisplay.Name = "pnlCenterDisplay";
+            this.pnlCenterDisplay.Size = new System.Drawing.Size(485, 476);
+            this.pnlCenterDisplay.TabIndex = 4;
+            this.pnlCenterDisplay.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // avatarCenterDisplay
+            // 
+            this.avatarCenterDisplay.AvatarSize = 400;
+            this.avatarCenterDisplay.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.avatarCenterDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.avatarCenterDisplay.FillColor = System.Drawing.Color.Transparent;
+            this.avatarCenterDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.avatarCenterDisplay.Icon = Sunny.UI.UIAvatar.UIIcon.Image;
+            this.avatarCenterDisplay.Location = new System.Drawing.Point(48, 36);
+            this.avatarCenterDisplay.MinimumSize = new System.Drawing.Size(1, 1);
+            this.avatarCenterDisplay.Name = "avatarCenterDisplay";
+            this.avatarCenterDisplay.Size = new System.Drawing.Size(400, 400);
+            this.avatarCenterDisplay.TabIndex = 1;
+            this.avatarCenterDisplay.Text = "uiAvatar1";
+            // 
+            // wmp
+            // 
+            this.wmp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wmp.Enabled = true;
+            this.wmp.Location = new System.Drawing.Point(0, 0);
+            this.wmp.Name = "wmp";
+            this.wmp.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmp.OcxState")));
+            this.wmp.Size = new System.Drawing.Size(485, 476);
+            this.wmp.TabIndex = 0;
+            // 
+            // FormPlayer
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(973, 665);
+            this.Controls.Add(this.pnlCenterDisplay);
+            this.Controls.Add(this.pnlRightInfo);
+            this.Controls.Add(this.pnlQueue);
+            this.Controls.Add(this.pnlBottomControls);
+            this.Name = "FormPlayer";
+            this.Text = "FormPlayer";
+            this.ZoomScaleRect = new System.Drawing.Rectangle(19, 19, 800, 450);
+            this.Load += new System.EventHandler(this.FormPlayer_Load);
+            this.pnlBottomControls.ResumeLayout(false);
+            this.pnlBottomControls.PerformLayout();
+            this.pnlQueue.ResumeLayout(false);
+            this.pnlRightInfo.ResumeLayout(false);
+            this.uiTabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.pnlCenterDisplay.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.wmp)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+        private Sunny.UI.UIMillisecondTimer timer;
+        private Sunny.UI.UIPanel pnlBottomControls;
+        private Sunny.UI.UITrackBar trackProgress;
+        private Sunny.UI.UISymbolButton btnShuffle;
+        private Sunny.UI.UILabel lblTotalTime;
+        private Sunny.UI.UILabel lblCurrentTime;
+        private Sunny.UI.UISymbolButton btnNext;
+        private Sunny.UI.UISymbolButton btnPlayPause;
+        private Sunny.UI.UISymbolButton btnPrevious;
+        private Sunny.UI.UISymbolButton btnSettings;
+        private Sunny.UI.UISymbolButton btnLoop;
+        private Sunny.UI.UITrackBar trackVolume;
+        private Sunny.UI.UISymbolButton uiSymbolButton1;
+        private Sunny.UI.UIPanel pnlQueue;
+        private Sunny.UI.UIListBox lstNowPlayingQueue;
+        private Sunny.UI.UILabel uiLabel1;
+        private Sunny.UI.UIPanel pnlRightInfo;
+        private Sunny.UI.UITabControl uiTabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private Sunny.UI.UILabel lblInfoArtist;
+        private Sunny.UI.UILabel lblInfoSongName;
+        private Sunny.UI.UIAvatar avatarInfo;
+        private Sunny.UI.UIRichTextBox txtLyrics;
+        private Sunny.UI.UIPanel pnlCenterDisplay;
+        private Sunny.UI.UIAvatar avatarCenterDisplay;
+        private AxWMPLib.AxWindowsMediaPlayer wmp;
+    }
+}
