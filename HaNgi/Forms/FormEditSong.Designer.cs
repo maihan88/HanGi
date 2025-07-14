@@ -59,24 +59,21 @@
             this.uiLabel1.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.uiLabel1.Name = "uiLabel1";
-            this.uiToolTip1.SetToolTip(this.uiLabel1, resources.GetString("uiLabel1.ToolTip"));
             // 
             // avatarPreview
             // 
-            resources.ApplyResources(this.avatarPreview, "avatarPreview");
             this.avatarPreview.AvatarSize = 150;
             this.avatarPreview.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.avatarPreview, "avatarPreview");
             this.avatarPreview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
             this.avatarPreview.Icon = Sunny.UI.UIAvatar.UIIcon.Image;
             this.avatarPreview.Name = "avatarPreview";
             this.avatarPreview.Shape = Sunny.UI.UIShape.Square;
             this.avatarPreview.Symbol = 558373;
             this.avatarPreview.SymbolSize = 50;
-            this.uiToolTip1.SetToolTip(this.avatarPreview, resources.GetString("avatarPreview.ToolTip"));
             // 
             // uiPanel1
             // 
-            resources.ApplyResources(this.uiPanel1, "uiPanel1");
             this.uiPanel1.Controls.Add(this.btnOpenCoverFolder);
             this.uiPanel1.Controls.Add(this.btnOpenMusicFolder);
             this.uiPanel1.Controls.Add(this.txtFilePath);
@@ -90,17 +87,17 @@
             this.uiPanel1.Controls.Add(this.txtName);
             this.uiPanel1.Controls.Add(this.avatarPreview);
             this.uiPanel1.Controls.Add(this.uiLabel1);
+            resources.ApplyResources(this.uiPanel1, "uiPanel1");
             this.uiPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(56)))));
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiToolTip1.SetToolTip(this.uiPanel1, resources.GetString("uiPanel1.ToolTip"));
             // 
             // btnOpenCoverFolder
             // 
-            resources.ApplyResources(this.btnOpenCoverFolder, "btnOpenCoverFolder");
             this.btnOpenCoverFolder.BackColor = System.Drawing.Color.Transparent;
             this.btnOpenCoverFolder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenCoverFolder.FillColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnOpenCoverFolder, "btnOpenCoverFolder");
             this.btnOpenCoverFolder.ForeDisableColor = System.Drawing.Color.Transparent;
             this.btnOpenCoverFolder.Name = "btnOpenCoverFolder";
             this.btnOpenCoverFolder.RectColor = System.Drawing.Color.Transparent;
@@ -110,7 +107,6 @@
             this.btnOpenCoverFolder.TipsColor = System.Drawing.Color.Transparent;
             this.btnOpenCoverFolder.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnOpenCoverFolder.TipsText = "Mở thư mục chứa ảnh bìa";
-            this.uiToolTip1.SetToolTip(this.btnOpenCoverFolder, resources.GetString("btnOpenCoverFolder.ToolTip"));
             // 
             // btnOpenMusicFolder
             // 
@@ -127,7 +123,6 @@
             this.btnOpenMusicFolder.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnOpenMusicFolder.TipsForeColor = System.Drawing.Color.Black;
             this.btnOpenMusicFolder.TipsText = "Mở thư mục chứa file nhạc";
-            this.uiToolTip1.SetToolTip(this.btnOpenMusicFolder, resources.GetString("btnOpenMusicFolder.ToolTip"));
             // 
             // txtFilePath
             // 
@@ -140,7 +135,6 @@
             this.txtFilePath.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.txtFilePath.ShowText = false;
             this.txtFilePath.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiToolTip1.SetToolTip(this.txtFilePath, resources.GetString("txtFilePath.ToolTip"));
             // 
             // btnCancel
             // 
@@ -152,7 +146,6 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Radius = 50;
             this.btnCancel.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.uiToolTip1.SetToolTip(this.btnCancel, resources.GetString("btnCancel.ToolTip"));
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
@@ -167,7 +160,6 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Radius = 50;
             this.btnSave.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.uiToolTip1.SetToolTip(this.btnSave, resources.GetString("btnSave.ToolTip"));
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnSelectFile
@@ -180,20 +172,18 @@
             this.btnSelectFile.Name = "btnSelectFile";
             this.btnSelectFile.Radius = 25;
             this.btnSelectFile.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.uiToolTip1.SetToolTip(this.btnSelectFile, resources.GetString("btnSelectFile.ToolTip"));
             this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
             // 
             // btnSelectCover
             // 
-            resources.ApplyResources(this.btnSelectCover, "btnSelectCover");
             this.btnSelectCover.BackColor = System.Drawing.Color.Transparent;
             this.btnSelectCover.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectCover.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            resources.ApplyResources(this.btnSelectCover, "btnSelectCover");
             this.btnSelectCover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnSelectCover.Name = "btnSelectCover";
             this.btnSelectCover.Radius = 25;
             this.btnSelectCover.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.uiToolTip1.SetToolTip(this.btnSelectCover, resources.GetString("btnSelectCover.ToolTip"));
             this.btnSelectCover.Click += new System.EventHandler(this.btnSelectCover_Click);
             // 
             // uiLabel3
@@ -202,7 +192,6 @@
             this.uiLabel3.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.uiLabel3.Name = "uiLabel3";
-            this.uiToolTip1.SetToolTip(this.uiLabel3, resources.GetString("uiLabel3.ToolTip"));
             // 
             // txtArtist
             // 
@@ -216,7 +205,6 @@
             this.txtArtist.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.txtArtist.ShowText = false;
             this.txtArtist.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiToolTip1.SetToolTip(this.txtArtist, resources.GetString("txtArtist.ToolTip"));
             this.txtArtist.Watermark = "";
             // 
             // uiLabel2
@@ -225,7 +213,6 @@
             this.uiLabel2.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.uiLabel2.Name = "uiLabel2";
-            this.uiToolTip1.SetToolTip(this.uiLabel2, resources.GetString("uiLabel2.ToolTip"));
             // 
             // txtName
             // 
@@ -239,31 +226,28 @@
             this.txtName.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.txtName.ShowText = false;
             this.txtName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiToolTip1.SetToolTip(this.txtName, resources.GetString("txtName.ToolTip"));
             this.txtName.Watermark = "";
             // 
             // uiPanel2
             // 
-            resources.ApplyResources(this.uiPanel2, "uiPanel2");
             this.uiPanel2.Controls.Add(this.btnImportLyric);
             this.uiPanel2.Controls.Add(this.txtLyric);
             this.uiPanel2.Controls.Add(this.uiLabel4);
+            resources.ApplyResources(this.uiPanel2, "uiPanel2");
             this.uiPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(56)))));
             this.uiPanel2.Name = "uiPanel2";
             this.uiPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiToolTip1.SetToolTip(this.uiPanel2, resources.GetString("uiPanel2.ToolTip"));
             // 
             // btnImportLyric
             // 
-            resources.ApplyResources(this.btnImportLyric, "btnImportLyric");
             this.btnImportLyric.BackColor = System.Drawing.Color.Transparent;
             this.btnImportLyric.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImportLyric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            resources.ApplyResources(this.btnImportLyric, "btnImportLyric");
             this.btnImportLyric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnImportLyric.Name = "btnImportLyric";
             this.btnImportLyric.Radius = 25;
             this.btnImportLyric.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.uiToolTip1.SetToolTip(this.btnImportLyric, resources.GetString("btnImportLyric.ToolTip"));
             this.btnImportLyric.Click += new System.EventHandler(this.btnImportLyric_Click);
             // 
             // txtLyric
@@ -276,7 +260,6 @@
             this.txtLyric.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.txtLyric.ShowText = false;
             this.txtLyric.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiToolTip1.SetToolTip(this.txtLyric, resources.GetString("txtLyric.ToolTip"));
             // 
             // uiLabel4
             // 
@@ -284,7 +267,6 @@
             this.uiLabel4.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.uiLabel4.Name = "uiLabel4";
-            this.uiToolTip1.SetToolTip(this.uiLabel4, resources.GetString("uiLabel4.ToolTip"));
             // 
             // uiToolTip1
             // 
@@ -294,14 +276,13 @@
             // 
             // FormEditSong
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(56)))));
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
             this.Name = "FormEditSong";
             this.TitleFont = new System.Drawing.Font("Lora Medium", 12F, System.Drawing.FontStyle.Bold);
-            this.uiToolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.ZoomScaleRect = new System.Drawing.Rectangle(19, 19, 800, 450);
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel1.PerformLayout();

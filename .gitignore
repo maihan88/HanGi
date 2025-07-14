@@ -1,4 +1,13 @@
-bin/
-obj/
-*.user
+# Tệp và thư mục do Visual Studio tạo
 *.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Tệp và thư mục do build/compile tạo ra
+[Bb]in/
+[Bb]obj/
+
+# Thư mục chứa các gói/thư viện tải về (NuGet)
+packages/

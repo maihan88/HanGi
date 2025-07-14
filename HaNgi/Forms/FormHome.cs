@@ -402,7 +402,7 @@ namespace HaNgi
 
         private void uiPanel1_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

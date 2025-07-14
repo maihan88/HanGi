@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace HaNgi
 {
@@ -27,12 +23,7 @@ namespace HaNgi
         {
             foreach (Control control in parent.Controls)
             {
-                if (control.Name != "lblSongPreview")
-                {
-                    control.Click += (sender, e) => {
-                        this.OnClick(e);
-                    };
-                }
+                control.Click += (sender, e) => { this.OnClick(e); };
                 if (control.HasChildren)
                 {
                     AttachClickEventToAllChildren(control);
@@ -51,7 +42,7 @@ namespace HaNgi
             }
             else
             {
-                lblSongPreview.Text = "";
+                lblSongPreview.Text = "Chưa có bài hát nào trong playlist này.";
             }
         }
 
@@ -66,26 +57,18 @@ namespace HaNgi
                     {
                         avatarCover.Image = Image.FromStream(ms);
                     }
-                    avatarCover.FillColor = Color.Transparent;
                 }
                 catch
                 {
                     avatarCover.Image = null;
                     avatarCover.Symbol = 61449;
-                    avatarCover.FillColor = Color.Gainsboro;
                 }
             }
             else
             {
                 avatarCover.Image = null;
                 avatarCover.Symbol = 61449;
-                avatarCover.FillColor = Color.Gainsboro;
             }
-        }
-
-        private void lblPlaylistName_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

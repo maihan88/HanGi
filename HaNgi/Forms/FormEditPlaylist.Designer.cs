@@ -22,13 +22,13 @@
         private void InitializeComponent()
         {
             this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.avatarPreview = new Sunny.UI.UIAvatar();
             this.uiPanel5 = new Sunny.UI.UIPanel();
             this.btnCancel = new Sunny.UI.UIButton();
             this.btnSave = new Sunny.UI.UIButton();
             this.btnSelectCover = new Sunny.UI.UIButton();
             this.txtPlaylistName = new Sunny.UI.UITextBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.avatarPreview = new Sunny.UI.UIAvatar();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.uiPanel4 = new Sunny.UI.UIPanel();
             this.uiTransferSongs = new Sunny.UI.UITransfer();
@@ -45,11 +45,11 @@
             // uiPanel1
             // 
             this.uiPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(56)))));
+            this.uiPanel1.Controls.Add(this.avatarPreview);
             this.uiPanel1.Controls.Add(this.uiPanel5);
             this.uiPanel1.Controls.Add(this.btnSelectCover);
             this.uiPanel1.Controls.Add(this.txtPlaylistName);
             this.uiPanel1.Controls.Add(this.uiLabel1);
-            this.uiPanel1.Controls.Add(this.avatarPreview);
             this.uiPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.uiPanel1.FillColor = System.Drawing.Color.Transparent;
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -61,6 +61,20 @@
             this.uiPanel1.TabIndex = 1;
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // avatarPreview
+            // 
+            this.avatarPreview.AvatarSize = 150;
+            this.avatarPreview.BackColor = System.Drawing.Color.Transparent;
+            this.avatarPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.avatarPreview.Icon = Sunny.UI.UIAvatar.UIIcon.Image;
+            this.avatarPreview.Location = new System.Drawing.Point(37, 26);
+            this.avatarPreview.MinimumSize = new System.Drawing.Size(1, 1);
+            this.avatarPreview.Name = "avatarPreview";
+            this.avatarPreview.Shape = Sunny.UI.UIShape.Square;
+            this.avatarPreview.Size = new System.Drawing.Size(150, 150);
+            this.avatarPreview.TabIndex = 6;
+            this.avatarPreview.Text = "uiAvatar1";
             // 
             // uiPanel5
             // 
@@ -119,7 +133,7 @@
             this.btnSelectCover.BackColor = System.Drawing.Color.Transparent;
             this.btnSelectCover.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectCover.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.btnSelectCover.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnSelectCover.Font = new System.Drawing.Font("Lora", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectCover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnSelectCover.Location = new System.Drawing.Point(212, 141);
             this.btnSelectCover.MinimumSize = new System.Drawing.Size(1, 1);
@@ -138,7 +152,7 @@
             this.txtPlaylistName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtPlaylistName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPlaylistName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.txtPlaylistName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPlaylistName.Font = new System.Drawing.Font("Lora", 12F);
             this.txtPlaylistName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtPlaylistName.Location = new System.Drawing.Point(212, 91);
             this.txtPlaylistName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -164,24 +178,6 @@
             this.uiLabel1.Size = new System.Drawing.Size(139, 30);
             this.uiLabel1.TabIndex = 1;
             this.uiLabel1.Text = "Tên playlist:";
-            // 
-            // avatarPreview
-            // 
-            this.avatarPreview.AvatarSize = 150;
-            this.avatarPreview.BackColor = System.Drawing.Color.Transparent;
-            this.avatarPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.avatarPreview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.avatarPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.avatarPreview.Icon = Sunny.UI.UIAvatar.UIIcon.Image;
-            this.avatarPreview.Location = new System.Drawing.Point(34, 26);
-            this.avatarPreview.MinimumSize = new System.Drawing.Size(1, 1);
-            this.avatarPreview.Name = "avatarPreview";
-            this.avatarPreview.Radius = 0;
-            this.avatarPreview.Shape = Sunny.UI.UIShape.Square;
-            this.avatarPreview.Size = new System.Drawing.Size(150, 150);
-            this.avatarPreview.Symbol = 0;
-            this.avatarPreview.TabIndex = 0;
-            this.avatarPreview.Text = "uiAvatar1";
             // 
             // uiPanel2
             // 
@@ -286,8 +282,10 @@
             this.ClientSize = new System.Drawing.Size(1173, 700);
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
+            this.Font = new System.Drawing.Font("Lora", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FormEditPlaylist";
             this.Text = "FormEditPlaylist";
+            this.TitleFont = new System.Drawing.Font("Lora", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ZoomScaleRect = new System.Drawing.Rectangle(19, 19, 800, 450);
             this.Load += new System.EventHandler(this.FormEditPlaylist_Load);
             this.uiPanel1.ResumeLayout(false);
@@ -303,7 +301,6 @@
         #endregion
         private Sunny.UI.UIPanel uiPanel1;
         private Sunny.UI.UIPanel uiPanel2;
-        private Sunny.UI.UIAvatar avatarPreview;
         private Sunny.UI.UITextBox txtPlaylistName;
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UIButton btnSelectCover;
@@ -315,5 +312,6 @@
         private Sunny.UI.UIButton btnSave;
         private Sunny.UI.UISymbolButton btnDown;
         private Sunny.UI.UISymbolButton btnUp;
+        private Sunny.UI.UIAvatar avatarPreview;
     }
 }

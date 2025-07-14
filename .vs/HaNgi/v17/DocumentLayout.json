@@ -3,76 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\helper file\\playerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\helper file\\playerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|c:\\users\\han nguyen\\onedrive - vlg\\documents\\code\\\u0111\u1ED3 \u00E1n\\hangi\\hangi\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|c:\\users\\han nguyen\\onedrive - vlg\\documents\\code\\\u0111\u1ED3 \u00E1n\\hangi\\hangi\\usercontrol\\playlistcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\usercontrol\\playlistcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|c:\\users\\han nguyen\\onedrive - vlg\\documents\\code\\\u0111\u1ED3 \u00E1n\\hangi\\hangi\\forms\\formsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\usercontrol\\songcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\usercontrol\\songcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|c:\\users\\han nguyen\\onedrive - vlg\\documents\\code\\\u0111\u1ED3 \u00E1n\\hangi\\hangi\\forms\\formplayersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formplayersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\model\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\model\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|c:\\users\\han nguyen\\onedrive - vlg\\documents\\code\\\u0111\u1ED3 \u00E1n\\hangi\\hangi\\forms\\formplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\helper file\\thememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\helper file\\thememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\helper file\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\helper file\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formeditsong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formeditsong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\helper file\\pathhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\helper file\\pathhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formeditplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formeditplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\helper file\\lyricline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\helper file\\lyricline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|c:\\users\\han nguyen\\onedrive - vlg\\documents\\code\\\u0111\u1ED3 \u00E1n\\hangi\\hangi\\usercontrol\\playlistcard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\usercontrol\\playlistcard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\helper file\\lrcparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\helper file\\lrcparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\helper file\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\helper file\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formplayersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formplayersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formeditplaylist.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|c:\\users\\han nguyen\\onedrive - vlg\\documents\\code\\\u0111\u1ED3 \u00E1n\\hangi\\hangi\\forms\\formeditplaylist.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formeditplaylist.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\usercontrol\\playlistcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\usercontrol\\playlistcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formeditsong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formeditsong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formeditplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formeditplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\helper file\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\helper file\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\hangi\\forms\\formplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A8455B-F71B-4FCC-8429-0C05326205F6}|HaNgi\\HaNgi.csproj|solutionrelative:hangi\\forms\\formplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,225 +66,185 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SongCard.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\UserControl\\SongCard.cs",
-              "RelativeDocumentMoniker": "HaNgi\\UserControl\\SongCard.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\UserControl\\SongCard.cs",
-              "RelativeToolTip": "HaNgi\\UserControl\\SongCard.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAC4AAAARAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "HaNgi\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\MainForm.cs [Design]",
+              "RelativeToolTip": "HaNgi\\Forms\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:29:21.364Z"
+              "WhenOpened": "2025-07-10T13:45:28.804Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FormSearch.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormSearch.cs",
+              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormSearch.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormSearch.cs [Design]",
+              "RelativeToolTip": "HaNgi\\Forms\\FormSearch.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T13:45:24.892Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormPlayerSettings.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormPlayerSettings.cs",
+              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormPlayerSettings.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormPlayerSettings.cs [Design]",
+              "RelativeToolTip": "HaNgi\\Forms\\FormPlayerSettings.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T13:45:20.34Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormPlayer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormPlayer.cs",
+              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormPlayer.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormPlayer.cs [Design]",
+              "RelativeToolTip": "HaNgi\\Forms\\FormPlayer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T13:45:06.744Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlaylistCard.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\UserControl\\PlaylistCard.Designer.cs",
+              "RelativeDocumentMoniker": "HaNgi\\UserControl\\PlaylistCard.Designer.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\UserControl\\PlaylistCard.Designer.cs",
+              "RelativeToolTip": "HaNgi\\UserControl\\PlaylistCard.Designer.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAkwFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T13:16:55.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormEditPlaylist.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditPlaylist.Designer.cs",
+              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormEditPlaylist.Designer.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditPlaylist.Designer.cs",
+              "RelativeToolTip": "HaNgi\\Forms\\FormEditPlaylist.Designer.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAgwEwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T12:41:43.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormHome.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormHome.cs",
+              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormHome.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormHome.cs [Design]",
+              "RelativeToolTip": "HaNgi\\Forms\\FormHome.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T09:57:21.997Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormEditSong.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditSong.cs",
+              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormEditSong.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditSong.cs [Design]",
+              "RelativeToolTip": "HaNgi\\Forms\\FormEditSong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T06:03:25.448Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormEditPlaylist.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditPlaylist.cs",
+              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormEditPlaylist.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditPlaylist.cs [Design]",
+              "RelativeToolTip": "HaNgi\\Forms\\FormEditPlaylist.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T06:43:20.456Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "PlaylistCard.cs",
               "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\UserControl\\PlaylistCard.cs",
               "RelativeDocumentMoniker": "HaNgi\\UserControl\\PlaylistCard.cs",
               "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\UserControl\\PlaylistCard.cs",
               "RelativeToolTip": "HaNgi\\UserControl\\PlaylistCard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwEkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T01:28:54.666Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Playlist.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Model\\Playlist.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Model\\Playlist.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Model\\Playlist.cs",
-              "RelativeToolTip": "HaNgi\\Model\\Playlist.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:28:40.211Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ThemeManager.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\ThemeManager.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Helper file\\ThemeManager.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\ThemeManager.cs",
-              "RelativeToolTip": "HaNgi\\Helper file\\ThemeManager.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:27:41.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\Program.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Helper file\\Program.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\Program.cs",
-              "RelativeToolTip": "HaNgi\\Helper file\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:27:02.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerService.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\PlayerService.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Helper file\\PlayerService.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\PlayerService.cs",
-              "RelativeToolTip": "HaNgi\\Helper file\\PlayerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:26:39.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PathHelper.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\PathHelper.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Helper file\\PathHelper.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\PathHelper.cs",
-              "RelativeToolTip": "HaNgi\\Helper file\\PathHelper.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:23:31.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LyricLine.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\LyricLine.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Helper file\\LyricLine.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\LyricLine.cs",
-              "RelativeToolTip": "HaNgi\\Helper file\\LyricLine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:23:22.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LrcParser.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\LrcParser.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Helper file\\LrcParser.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\LrcParser.cs",
-              "RelativeToolTip": "HaNgi\\Helper file\\LrcParser.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:22:51.894Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\DataAccess.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Helper file\\DataAccess.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\DataAccess.cs",
-              "RelativeToolTip": "HaNgi\\Helper file\\DataAccess.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAAMEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:21:19.648Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\MainForm.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Forms\\MainForm.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\MainForm.cs",
-              "RelativeToolTip": "HaNgi\\Forms\\MainForm.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAGUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:20:22.923Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FormSearch.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormSearch.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormSearch.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormSearch.cs",
-              "RelativeToolTip": "HaNgi\\Forms\\FormSearch.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:19:57.872Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FormPlayerSettings.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormPlayerSettings.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormPlayerSettings.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormPlayerSettings.cs",
-              "RelativeToolTip": "HaNgi\\Forms\\FormPlayerSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:19:15.339Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FormPlayer.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormPlayer.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormPlayer.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormPlayer.cs",
-              "RelativeToolTip": "HaNgi\\Forms\\FormPlayer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:04:13.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "FormHome.cs",
               "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormHome.cs",
               "RelativeDocumentMoniker": "HaNgi\\Forms\\FormHome.cs",
               "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormHome.cs",
               "RelativeToolTip": "HaNgi\\Forms\\FormHome.cs",
-              "ViewState": "AgIAAIMBAAAAAAAAAAAAAJQBAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAHcBAAAAAAAAAAAIwJcBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T01:00:56.276Z"
+              "WhenOpened": "2025-07-10T09:57:24.012Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FormEditPlaylist.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditPlaylist.Designer.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormEditPlaylist.Designer.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditPlaylist.Designer.cs",
-              "RelativeToolTip": "HaNgi\\Forms\\FormEditPlaylist.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T00:29:00.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FormEditSong.cs",
-              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditSong.cs",
-              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormEditSong.cs",
-              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditSong.cs",
-              "RelativeToolTip": "HaNgi\\Forms\\FormEditSong.cs",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAAAMYAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T13:18:14.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 11,
               "Title": "FormEditPlaylist.cs",
               "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditPlaylist.cs",
               "RelativeDocumentMoniker": "HaNgi\\Forms\\FormEditPlaylist.cs",
               "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormEditPlaylist.cs",
               "RelativeToolTip": "HaNgi\\Forms\\FormEditPlaylist.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgBAAAAAAAAAAAwwCsBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T00:08:04.31Z"
+              "WhenOpened": "2025-07-10T06:43:25.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormPlayer.cs",
+              "RelativeDocumentMoniker": "HaNgi\\Forms\\FormPlayer.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Forms\\FormPlayer.cs",
+              "RelativeToolTip": "HaNgi\\Forms\\FormPlayer.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBABAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T05:56:55.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\DataAccess.cs",
+              "RelativeDocumentMoniker": "HaNgi\\Helper file\\DataAccess.cs",
+              "ToolTip": "C:\\Users\\HAN NGUYEN\\OneDrive - VLG\\Documents\\Code\\\u0110\u1ED3 \u00E1n\\HaNgi\\HaNgi\\Helper file\\DataAccess.cs",
+              "RelativeToolTip": "HaNgi\\Helper file\\DataAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAM8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T05:56:31.754Z"
             }
           ]
         }

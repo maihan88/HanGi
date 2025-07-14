@@ -117,308 +117,248 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="txtLyric.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="txtFilePath.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="txtLyric.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="&gt;&gt;btnOpenMusicFolder.Name" xml:space="preserve">
-    <value>btnOpenMusicFolder</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
   <data name="uiLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="btnOpenMusicFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>603, 313</value>
-  </data>
-  <data name="btnOpenMusicFolder.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnOpenMusicFolder.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;uiPanel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtLyric.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 57</value>
-  </data>
-  <data name="txtLyric.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="txtFilePath.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="btnOpenCoverFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>158, 192</value>
-  </data>
-  <data name="txtArtist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 134</value>
-  </data>
-  <data name="uiLabel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;uiPanel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnOpenMusicFolder.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="uiPanel1.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="uiLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 96</value>
-  </data>
-  <data name="uiLabel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="avatarPreview.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="uiLabel3.Font" type="System.Drawing.Font, System.Drawing">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="uiLabel1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lora SemiBold, 12pt, style=Bold</value>
   </data>
-  <data name="uiPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 35</value>
-  </data>
-  <data name="txtName.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txtName.Type" xml:space="preserve">
-    <value>Sunny.UI.UITextBox, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="uiPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>685, 665</value>
-  </data>
-  <data name="txtLyric.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="uiPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora Medium, 12pt, style=Bold</value>
-  </data>
-  <data name="btnOpenMusicFolder.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="uiLabel4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora SemiBold, 12pt, style=Bold</value>
-  </data>
-  <data name="btnSelectCover.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 40</value>
-  </data>
-  <data name="btnSelectCover.Text" xml:space="preserve">
-    <value>Thêm ảnh</value>
-  </data>
-  <data name="uiLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 268</value>
-  </data>
-  <data name="txtFilePath.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnSelectFile.Text" xml:space="preserve">
-    <value>Chọn file</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
-    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="uiPanel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="uiPanel2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;uiLabel3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFile.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btnSelectFile.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="&gt;&gt;txtFilePath.Type" xml:space="preserve">
-    <value>Sunny.UI.UIRichTextBox, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="uiPanel2.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="avatarPreview.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFile.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="btnOpenCoverFolder.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;uiPanel2.Name" xml:space="preserve">
-    <value>uiPanel2</value>
-  </data>
-  <data name="uiLabel4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnSelectCover.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnSelectCover.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="&gt;&gt;uiPanel1.Name" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="btnImportLyric.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="btnSelectCover.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="uiPanel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;avatarPreview.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormEditSong</value>
-  </data>
-  <data name="txtArtist.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnOpenMusicFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="uiLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 21</value>
   </data>
   <data name="uiLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 30</value>
   </data>
-  <data name="&gt;&gt;uiLabel3.Name" xml:space="preserve">
-    <value>uiLabel3</value>
+  <data name="uiLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;btnSelectCover.Name" xml:space="preserve">
-    <value>btnSelectCover</value>
-  </data>
-  <data name="&gt;&gt;uiToolTip1.Type" xml:space="preserve">
-    <value>Sunny.UI.UIToolTip, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="&gt;&gt;btnOpenCoverFolder.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;uiToolTip1.Name" xml:space="preserve">
-    <value>uiToolTip1</value>
-  </data>
-  <data name="&gt;&gt;txtArtist.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="uiLabel3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="txtFilePath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Hủy</value>
-  </data>
-  <data name="uiLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 30</value>
-  </data>
-  <data name="txtName.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="txtName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 54</value>
-  </data>
-  <data name="uiLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 30</value>
-  </data>
-  <data name="uiLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 30</value>
-  </data>
-  <data name="uiLabel4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1173, 700</value>
-  </data>
-  <data name="btnSelectFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="txtName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Montserrat, 12pt</value>
-  </data>
-  <data name="btnSelectCover.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora Medium, 12pt, style=Bold</value>
-  </data>
-  <data name="btnOpenMusicFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 37</value>
-  </data>
-  <data name="&gt;&gt;uiLabel2.Name" xml:space="preserve">
-    <value>uiLabel2</value>
-  </data>
-  <data name="uiLabel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora SemiBold, 12pt, style=Bold</value>
-  </data>
-  <data name="txtFilePath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="btnImportLyric.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="uiPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="txtLyric.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="uiLabel1.Text" xml:space="preserve">
+    <value>Tên bài hát:</value>
   </data>
   <data name="&gt;&gt;uiLabel1.Name" xml:space="preserve">
     <value>uiLabel1</value>
   </data>
-  <data name="uiLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 21</value>
+  <data name="&gt;&gt;uiLabel1.Type" xml:space="preserve">
+    <value>Sunny.UI.UILabel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
   </data>
-  <data name="uiPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>685, 35</value>
+  <data name="&gt;&gt;uiLabel1.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
   </data>
-  <data name="uiPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>488, 665</value>
+  <data name="&gt;&gt;uiLabel1.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
-  <data name="uiLabel3.Text" xml:space="preserve">
-    <value>File nhạc:</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="avatarPreview.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>FormEditSong</value>
+  <data name="avatarPreview.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="uiLabel2.Text" xml:space="preserve">
-    <value>Nghệ sĩ:</value>
+  <data name="avatarPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 21</value>
+  </data>
+  <data name="avatarPreview.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="avatarPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 150</value>
+  </data>
+  <data name="avatarPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;avatarPreview.Name" xml:space="preserve">
+    <value>avatarPreview</value>
+  </data>
+  <data name="&gt;&gt;avatarPreview.Type" xml:space="preserve">
+    <value>Sunny.UI.UIAvatar, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;avatarPreview.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;avatarPreview.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnOpenCoverFolder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="btnOpenCoverFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 192</value>
+  </data>
+  <data name="btnOpenCoverFolder.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="btnOpenCoverFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 40</value>
+  </data>
+  <data name="btnOpenCoverFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;btnOpenCoverFolder.Name" xml:space="preserve">
+    <value>btnOpenCoverFolder</value>
+  </data>
+  <data name="&gt;&gt;btnOpenCoverFolder.Type" xml:space="preserve">
+    <value>Sunny.UI.UISymbolButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnOpenCoverFolder.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnOpenCoverFolder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnOpenMusicFolder.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnOpenMusicFolder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="btnOpenMusicFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>603, 313</value>
+  </data>
+  <data name="btnOpenMusicFolder.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="btnOpenMusicFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 37</value>
+  </data>
+  <data name="btnOpenMusicFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMusicFolder.Name" xml:space="preserve">
+    <value>btnOpenMusicFolder</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMusicFolder.Type" xml:space="preserve">
+    <value>Sunny.UI.UISymbolButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMusicFolder.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMusicFolder.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtFilePath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtFilePath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora, 11.999999pt</value>
+  </data>
+  <data name="txtFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 313</value>
+  </data>
+  <data name="txtFilePath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="txtFilePath.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="txtFilePath.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="txtFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 37</value>
+  </data>
+  <data name="txtFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txtFilePath.Name" xml:space="preserve">
+    <value>txtFilePath</value>
+  </data>
+  <data name="&gt;&gt;txtFilePath.Type" xml:space="preserve">
+    <value>Sunny.UI.UIRichTextBox, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;txtFilePath.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;txtFilePath.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora Medium, 12pt, style=Bold</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 446</value>
+  </data>
+  <data name="btnCancel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 50</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora Medium, 12pt, style=Bold</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 446</value>
+  </data>
+  <data name="btnSave.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 50</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="btnSave.Text" xml:space="preserve">
     <value>Lưu</value>
   </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnSelectFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="btnSelectFile.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lora Medium, 12pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;txtLyric.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="btnSelectFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 308</value>
+  </data>
+  <data name="btnSelectFile.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="btnSelectFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 42</value>
+  </data>
+  <data name="btnSelectFile.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnSelectFile.Text" xml:space="preserve">
+    <value>Chọn file</value>
   </data>
   <data name="&gt;&gt;btnSelectFile.Name" xml:space="preserve">
     <value>btnSelectFile</value>
@@ -426,364 +366,367 @@
   <data name="&gt;&gt;btnSelectFile.Type" xml:space="preserve">
     <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
   </data>
-  <data name="&gt;&gt;btnImportLyric.Parent" xml:space="preserve">
-    <value>uiPanel2</value>
+  <data name="&gt;&gt;btnSelectFile.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
   </data>
-  <data name="&gt;&gt;txtName.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;btnSelectFile.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnSelectCover.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora Medium, 12pt, style=Bold</value>
+  </data>
+  <data name="btnSelectCover.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 192</value>
+  </data>
+  <data name="btnSelectCover.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="btnSelectCover.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 40</value>
+  </data>
+  <data name="btnSelectCover.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnSelectCover.Text" xml:space="preserve">
+    <value>Thêm ảnh</value>
+  </data>
+  <data name="&gt;&gt;btnSelectCover.Name" xml:space="preserve">
+    <value>btnSelectCover</value>
+  </data>
+  <data name="&gt;&gt;btnSelectCover.Type" xml:space="preserve">
+    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnSelectCover.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnSelectCover.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="uiLabel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="uiLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora SemiBold, 12pt, style=Bold</value>
+  </data>
+  <data name="uiLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 268</value>
+  </data>
+  <data name="uiLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 30</value>
+  </data>
+  <data name="uiLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="uiLabel3.Text" xml:space="preserve">
+    <value>File nhạc:</value>
+  </data>
+  <data name="&gt;&gt;uiLabel3.Name" xml:space="preserve">
+    <value>uiLabel3</value>
+  </data>
+  <data name="&gt;&gt;uiLabel3.Type" xml:space="preserve">
+    <value>Sunny.UI.UILabel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;uiLabel3.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;uiLabel3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txtArtist.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtArtist.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora, 11.999999pt</value>
+  </data>
+  <data name="txtArtist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 134</value>
+  </data>
+  <data name="txtArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="txtArtist.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 16</value>
+  </data>
+  <data name="txtArtist.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtArtist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 37</value>
+  </data>
+  <data name="txtArtist.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtArtist.Name" xml:space="preserve">
+    <value>txtArtist</value>
+  </data>
+  <data name="&gt;&gt;txtArtist.Type" xml:space="preserve">
+    <value>Sunny.UI.UITextBox, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;txtArtist.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;txtArtist.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="uiLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="uiLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora SemiBold, 12pt, style=Bold</value>
+  </data>
+  <data name="uiLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 96</value>
+  </data>
+  <data name="uiLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 30</value>
+  </data>
+  <data name="uiLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="uiLabel2.Text" xml:space="preserve">
+    <value>Nghệ sĩ:</value>
+  </data>
+  <data name="&gt;&gt;uiLabel2.Name" xml:space="preserve">
+    <value>uiLabel2</value>
+  </data>
+  <data name="&gt;&gt;uiLabel2.Type" xml:space="preserve">
+    <value>Sunny.UI.UILabel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;uiLabel2.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;uiLabel2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txtName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora, 11.999999pt</value>
+  </data>
+  <data name="txtName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 54</value>
+  </data>
+  <data name="txtName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="txtName.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1, 16</value>
   </data>
+  <data name="txtName.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 37</value>
+  </data>
+  <data name="txtName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtName.Name" xml:space="preserve">
+    <value>txtName</value>
+  </data>
+  <data name="&gt;&gt;txtName.Type" xml:space="preserve">
+    <value>Sunny.UI.UITextBox, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;txtName.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;txtName.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="uiPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="uiPanel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="uiPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 35</value>
+  </data>
+  <data name="uiPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="uiPanel1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="uiPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>685, 665</value>
+  </data>
+  <data name="uiPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="uiPanel1.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;uiPanel1.Name" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;uiPanel1.Type" xml:space="preserve">
+    <value>Sunny.UI.UIPanel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;uiPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;uiPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnImportLyric.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora Medium, 12pt, style=Bold</value>
+  </data>
+  <data name="btnImportLyric.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 12</value>
+  </data>
+  <data name="btnImportLyric.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="btnImportLyric.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 37</value>
+  </data>
+  <data name="btnImportLyric.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnImportLyric.Text" xml:space="preserve">
+    <value>Chọn file</value>
+  </data>
+  <data name="&gt;&gt;btnImportLyric.Name" xml:space="preserve">
+    <value>btnImportLyric</value>
+  </data>
+  <data name="&gt;&gt;btnImportLyric.Type" xml:space="preserve">
+    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnImportLyric.Parent" xml:space="preserve">
+    <value>uiPanel2</value>
+  </data>
+  <data name="&gt;&gt;btnImportLyric.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtLyric.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="txtLyric.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="txtLyric.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora, 11.999999pt</value>
+  </data>
+  <data name="txtLyric.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 57</value>
+  </data>
+  <data name="txtLyric.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="txtLyric.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="txtLyric.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="txtLyric.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 584</value>
+  </data>
+  <data name="txtLyric.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtLyric.Name" xml:space="preserve">
+    <value>txtLyric</value>
+  </data>
   <data name="&gt;&gt;txtLyric.Type" xml:space="preserve">
     <value>Sunny.UI.UIRichTextBox, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
   </data>
-  <data name="txtFilePath.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;txtLyric.Parent" xml:space="preserve">
+    <value>uiPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtLyric.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="uiLabel4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="uiLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lora SemiBold, 12pt, style=Bold</value>
+  </data>
+  <data name="uiLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 21</value>
+  </data>
+  <data name="uiLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 30</value>
+  </data>
+  <data name="uiLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="uiLabel4.Text" xml:space="preserve">
     <value>Lời bài hát:</value>
   </data>
-  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 50</value>
+  <data name="&gt;&gt;uiLabel4.Name" xml:space="preserve">
+    <value>uiLabel4</value>
   </data>
-  <data name="&gt;&gt;uiLabel3.Type" xml:space="preserve">
+  <data name="&gt;&gt;uiLabel4.Type" xml:space="preserve">
     <value>Sunny.UI.UILabel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
   </data>
   <data name="&gt;&gt;uiLabel4.Parent" xml:space="preserve">
     <value>uiPanel2</value>
   </data>
-  <data name="txtFilePath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>411, 37</value>
-  </data>
-  <data name="&gt;&gt;uiLabel1.Type" xml:space="preserve">
-    <value>Sunny.UI.UILabel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="txtArtist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 37</value>
-  </data>
-  <data name="&gt;&gt;txtLyric.Name" xml:space="preserve">
-    <value>txtLyric</value>
-  </data>
-  <data name="&gt;&gt;txtArtist.Type" xml:space="preserve">
-    <value>Sunny.UI.UITextBox, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;txtArtist.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
-    <value>btnSave</value>
-  </data>
-  <data name="&gt;&gt;btnOpenCoverFolder.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="uiPanel2.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="btnImportLyric.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 37</value>
-  </data>
-  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Sunny.UI.UIForm, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="btnCancel.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="txtArtist.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtLyric.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;uiLabel1.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="uiLabel2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="avatarPreview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnOpenMusicFolder.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;txtFilePath.Name" xml:space="preserve">
-    <value>txtFilePath</value>
-  </data>
   <data name="&gt;&gt;uiLabel4.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;uiLabel4.Name" xml:space="preserve">
-    <value>uiLabel4</value>
-  </data>
-  <data name="txtArtist.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 16</value>
-  </data>
-  <data name="btnSave.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="uiPanel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 37</value>
-  </data>
-  <data name="&gt;&gt;uiPanel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtLyric.Parent" xml:space="preserve">
-    <value>uiPanel2</value>
-  </data>
-  <data name="uiLabel1.Text" xml:space="preserve">
-    <value>Tên bài hát:</value>
-  </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 446</value>
-  </data>
-  <data name="txtArtist.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Montserrat, 12pt</value>
-  </data>
-  <data name="btnOpenCoverFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 40</value>
-  </data>
-  <data name="&gt;&gt;uiLabel2.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="&gt;&gt;btnImportLyric.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="uiLabel4.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnSelectCover.Type" xml:space="preserve">
-    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="&gt;&gt;avatarPreview.Type" xml:space="preserve">
-    <value>Sunny.UI.UIAvatar, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="&gt;&gt;avatarPreview.Name" xml:space="preserve">
-    <value>avatarPreview</value>
-  </data>
-  <data name="txtName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnImportLyric.Name" xml:space="preserve">
-    <value>btnImportLyric</value>
-  </data>
-  <data name="btnImportLyric.Text" xml:space="preserve">
-    <value>Chọn file</value>
-  </data>
-  <data name="&gt;&gt;btnOpenMusicFolder.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
-  </data>
-  <data name="uiPanel1.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="btnSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
-  </data>
-  <data name="btnSave.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="&gt;&gt;uiLabel3.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="&gt;&gt;txtName.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="&gt;&gt;btnOpenCoverFolder.Type" xml:space="preserve">
-    <value>Sunny.UI.UISymbolButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="&gt;&gt;txtFilePath.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="uiLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 21</value>
-  </data>
-  <data name="btnImportLyric.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora Medium, 12pt, style=Bold</value>
-  </data>
-  <data name="uiPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnSelectFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>484, 308</value>
-  </data>
-  <data name="txtName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;uiPanel1.Type" xml:space="preserve">
-    <value>Sunny.UI.UIPanel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="avatarPreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 150</value>
-  </data>
-  <data name="btnSelectFile.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
-    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="avatarPreview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 21</value>
-  </data>
-  <data name="txtLyric.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnOpenCoverFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora Medium, 12pt, style=Bold</value>
-  </data>
-  <data name="btnOpenCoverFolder.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="txtArtist.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="uiLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 50</value>
-  </data>
-  <data name="uiLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnSelectCover.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="avatarPreview.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="txtLyric.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="uiLabel3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnOpenCoverFolder.Name" xml:space="preserve">
-    <value>btnOpenCoverFolder</value>
-  </data>
-  <data name="btnSelectFile.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="btnCancel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="uiLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;avatarPreview.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;btnImportLyric.Type" xml:space="preserve">
-    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="txtFilePath.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;uiLabel4.Type" xml:space="preserve">
-    <value>Sunny.UI.UILabel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 446</value>
-  </data>
-  <data name="&gt;&gt;txtArtist.Name" xml:space="preserve">
-    <value>txtArtist</value>
-  </data>
-  <data name="&gt;&gt;txtName.Name" xml:space="preserve">
-    <value>txtName</value>
-  </data>
-  <data name="btnOpenCoverFolder.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnImportLyric.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 12</value>
-  </data>
-  <data name="avatarPreview.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="txtArtist.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="&gt;&gt;uiLabel1.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="uiPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="&gt;&gt;btnOpenMusicFolder.Type" xml:space="preserve">
-    <value>Sunny.UI.UISymbolButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="&gt;&gt;uiPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnSelectCover.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 192</value>
-  </data>
-  <data name="btnImportLyric.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;txtFilePath.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;uiLabel2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;uiPanel2.Type" xml:space="preserve">
-    <value>Sunny.UI.UIPanel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="txtFilePath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 313</value>
-  </data>
-  <data name="btnSelectFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 42</value>
-  </data>
-  <data name="txtLyric.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 584</value>
-  </data>
-  <data name="uiPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="uiLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora SemiBold, 12pt, style=Bold</value>
   </data>
   <data name="uiPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;uiLabel2.Type" xml:space="preserve">
-    <value>Sunny.UI.UILabel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  <data name="uiPanel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="&gt;&gt;btnSelectCover.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="uiPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>685, 35</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="uiPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="uiPanel2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="uiPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 665</value>
+  </data>
+  <data name="uiPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="uiPanel2.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;uiPanel2.Name" xml:space="preserve">
+    <value>uiPanel2</value>
+  </data>
+  <data name="&gt;&gt;uiPanel2.Type" xml:space="preserve">
+    <value>Sunny.UI.UIPanel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;uiPanel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;uiPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="uiToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1173, 700</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FormEditSong</value>
+  </data>
+  <data name="&gt;&gt;uiToolTip1.Name" xml:space="preserve">
+    <value>uiToolTip1</value>
+  </data>
+  <data name="&gt;&gt;uiToolTip1.Type" xml:space="preserve">
+    <value>Sunny.UI.UIToolTip, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormEditSong</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Sunny.UI.UIForm, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
 </root>
