@@ -101,6 +101,7 @@
             this.btnOpenCoverFolder.ForeDisableColor = System.Drawing.Color.Transparent;
             this.btnOpenCoverFolder.Name = "btnOpenCoverFolder";
             this.btnOpenCoverFolder.RectColor = System.Drawing.Color.Transparent;
+            this.btnOpenCoverFolder.RectDisableColor = System.Drawing.Color.Transparent;
             this.btnOpenCoverFolder.ShowTips = true;
             this.btnOpenCoverFolder.Symbol = 61564;
             this.btnOpenCoverFolder.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -116,6 +117,7 @@
             this.btnOpenMusicFolder.FillColor = System.Drawing.Color.Transparent;
             this.btnOpenMusicFolder.Name = "btnOpenMusicFolder";
             this.btnOpenMusicFolder.RectColor = System.Drawing.Color.Transparent;
+            this.btnOpenMusicFolder.RectDisableColor = System.Drawing.Color.Transparent;
             this.btnOpenMusicFolder.ShowTips = true;
             this.btnOpenMusicFolder.Symbol = 61564;
             this.btnOpenMusicFolder.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -131,6 +133,7 @@
             this.txtFilePath.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
             this.txtFilePath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.Radius = 20;
             this.txtFilePath.ReadOnly = true;
             this.txtFilePath.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.txtFilePath.ShowText = false;

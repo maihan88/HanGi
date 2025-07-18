@@ -21,6 +21,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditPlaylist));
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.avatarPreview = new Sunny.UI.UIAvatar();
             this.uiPanel5 = new Sunny.UI.UIPanel();
@@ -175,7 +176,7 @@
             this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.uiLabel1.Location = new System.Drawing.Point(207, 49);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(139, 30);
+            this.uiLabel1.Size = new System.Drawing.Size(115, 24);
             this.uiLabel1.TabIndex = 1;
             this.uiLabel1.Text = "Tên playlist:";
             // 
@@ -283,6 +284,7 @@
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
             this.Font = new System.Drawing.Font("Lora", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEditPlaylist";
             this.Text = "FormEditPlaylist";
             this.TitleFont = new System.Drawing.Font("Lora", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

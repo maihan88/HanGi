@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HaNgi
 {
-    internal class LyricLine
+    public class LyricLine
     {
         public TimeSpan Time { get; set; }
         public string Text { get; set; }

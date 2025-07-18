@@ -59,35 +59,5 @@ namespace HaNgi.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] DefaultCover1 {
-            get {
-                object obj = ResourceManager.GetObject("DefaultCover1", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] DefaultCover2 {
-            get {
-                object obj = ResourceManager.GetObject("DefaultCover2", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] DefaultCover3 {
-            get {
-                object obj = ResourceManager.GetObject("DefaultCover3", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

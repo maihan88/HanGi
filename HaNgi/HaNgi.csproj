@@ -166,8 +166,11 @@
     <Compile Include="Helper file\PlayerService.cs" />
     <Compile Include="Helper file\LrcParser.cs" />
     <Compile Include="Helper file\LyricLine.cs" />
+    <Compile Include="LyricManager.cs" />
     <Compile Include="Model\Playlist.cs" />
     <Compile Include="Helper file\ThemeManager.cs" />
+    <Compile Include="PlayerManager.cs" />
+    <Compile Include="PlaylistManager.cs" />
     <Compile Include="UserControl\PlaylistCard.cs">
       <SubType>UserControl</SubType>
     </Compile>

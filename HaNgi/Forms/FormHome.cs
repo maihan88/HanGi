@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -12,6 +11,7 @@ namespace HaNgi
     public partial class FormHome : Sunny.UI.UIPage
     {
         private UserControl selectedCard = null;
+        private FormPlayer _playerForm;
 
         public FormHome()
         {
@@ -24,10 +24,21 @@ namespace HaNgi
             LoadData();
         }
 
-        private void LoadData()
+        public void SetPlayerFormReference(FormPlayer playerForm)
+        {
+            _playerForm = playerForm;
+        }
+
+        public void LoadData()
         {
             LoadSongs();
             LoadPlaylists();
+            ClearSelection();
+        }
+
+        private void ClearSelection()
+        {
+            selectedCard = null;
             pnlSongDetails.Visible = false;
             pnlPlaylistDetails.Visible = false;
         }
@@ -87,8 +98,9 @@ namespace HaNgi
         private void UpdateSongDetailsPanel()
         {
             if (!(selectedCard is SongCard songCard)) return;
-            var song = GetFullSongInfoFromDb(songCard.SongID);
+            var song = DataAccess.GetSongById(songCard.SongID);
             if (song == null) return;
+
             detailLblSongName.Text = song.SongName;
             detailLblArtist.Text = song.Artist;
             TimeSpan time = TimeSpan.FromSeconds(song.Duration);
@@ -100,20 +112,25 @@ namespace HaNgi
             else
             {
                 detailAvatar.Image = null;
+                detailAvatar.Symbol = 61442;
             }
         }
 
         private void UpdatePlaylistDetailsPanel()
         {
             if (!(selectedCard is PlaylistCard playlistCard)) return;
-            var playlist = GetFullPlaylistInfoFromDb(playlistCard.PlaylistID);
+            var playlist = DataAccess.GetPlaylistById(playlistCard.PlaylistID);
             if (playlist == null) return;
+
             playlistDetailLblName.Text = playlist.PlaylistName;
+
+            var songsInPlaylist = DataAccess.GetSongsByPlaylistId(playlist.PlaylistID);
             lstPlaylistSongsDetail.Items.Clear();
-            foreach (var song in playlist.Songs)
+            foreach (var song in songsInPlaylist)
             {
                 lstPlaylistSongsDetail.Items.Add($"{song.SongName} - {song.Artist}");
             }
+
             if (!string.IsNullOrEmpty(playlist.PlaylistImage) && File.Exists(playlist.PlaylistImage))
             {
                 try
@@ -134,121 +151,11 @@ namespace HaNgi
             }
         }
 
-        private Song GetFullSongInfoFromDb(int songId)
-        {
-            Song song = null;
-            string query = "SELECT * FROM dbo.Song WHERE SongID = @ID";
-            using (var conn = DatabaseHelper.GetConnection())
-            using (var cmd = new SqlCommand(query, conn))
-            {
-                cmd.Parameters.AddWithValue("@ID", songId);
-                try
-                {
-                    conn.Open();
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            song = new Song
-                            {
-                                SongID = songId,
-                                SongName = reader["SongName"].ToString(),
-                                Artist = reader["Artist"].ToString(),
-                                Duration = reader.GetInt32(reader.GetOrdinal("Duration")),
-                                FilePath = PathHelper.GetAbsoluteMusicPath(reader["FilePath"].ToString()),
-                                CoverPath = PathHelper.GetAbsoluteCoverPath(reader["CoverPath"].ToString()),
-                                FullLyric = reader["FullLyric"].ToString()
-                            };
-                        }
-                    }
-                }
-                catch (Exception ex) { UIMessageBox.ShowError("Lỗi lấy thông tin bài hát: " + ex.Message); }
-            }
-            return song;
-        }
-
-        private Playlist GetFullPlaylistInfoFromDb(int playlistId)
-        {
-            var playlist = new Playlist { PlaylistID = playlistId };
-            using (var conn = DatabaseHelper.GetConnection())
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT PlaylistName, PlaylistImage FROM dbo.Playlist WHERE PlaylistID = @ID";
-                    using (var cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@ID", playlistId);
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                playlist.PlaylistName = reader["PlaylistName"].ToString();
-                                playlist.PlaylistImage = PathHelper.GetAbsoluteCoverPath(reader["PlaylistImage"].ToString());
-                            }
-                            else return null;
-                        }
-                    }
-                    playlist.Songs = GetSongsFromDbByPlaylistId(playlistId, conn);
-                }
-                catch (Exception ex)
-                {
-                    UIMessageBox.ShowError("Lỗi tải thông tin playlist: " + ex.Message);
-                    return null;
-                }
-            }
-            return playlist;
-        }
-
-        private List<Song> GetSongsFromDbByPlaylistId(int playlistId, SqlConnection externalConn = null)
-        {
-            var list = new List<Song>();
-            SqlConnection conn = externalConn ?? DatabaseHelper.GetConnection();
-            bool shouldClose = externalConn == null;
-            try
-            {
-                if (shouldClose) conn.Open();
-                string query = @"SELECT s.* FROM dbo.Song s
-                         JOIN dbo.PlaylistSong ps ON s.SongID = ps.SongID
-                         WHERE ps.PlaylistID = @ID ORDER BY ps.OrderIndex";
-                using (var cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@ID", playlistId);
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            list.Add(new Song
-                            {
-                                SongID = reader.GetInt32(reader.GetOrdinal("SongID")),
-                                SongName = reader["SongName"].ToString(),
-                                Artist = reader["Artist"].ToString(),
-                                Duration = reader.GetInt32(reader.GetOrdinal("Duration")),
-                                FilePath = PathHelper.GetAbsoluteMusicPath(reader["FilePath"].ToString()),
-                                CoverPath = PathHelper.GetAbsoluteCoverPath(reader["CoverPath"].ToString()),
-                                FullLyric = reader["FullLyric"].ToString()
-                            });
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                UIMessageBox.ShowError("Lỗi tải các bài hát trong playlist: " + ex.Message);
-            }
-            finally
-            {
-                if (shouldClose && conn.State == System.Data.ConnectionState.Open)
-                    conn.Close();
-            }
-            return list;
-        }
-
         private void btnPlaySong_Click(object sender, EventArgs e)
         {
             if (selectedCard is SongCard songCard)
             {
-                var song = GetFullSongInfoFromDb(songCard.SongID);
+                var song = DataAccess.GetSongById(songCard.SongID);
                 if (song != null)
                 {
                     PlayerService.RequestPlay(new List<Song> { song });
@@ -260,7 +167,7 @@ namespace HaNgi
         {
             if (selectedCard is PlaylistCard playlistCard)
             {
-                var songs = GetSongsFromDbByPlaylistId(playlistCard.PlaylistID, null);
+                var songs = DataAccess.GetSongsByPlaylistId(playlistCard.PlaylistID);
                 if (songs != null && songs.Any())
                 {
                     PlayerService.RequestPlay(songs);
@@ -268,14 +175,13 @@ namespace HaNgi
             }
         }
 
-        // Các hàm thêm, sửa, xóa giữ nguyên
         private void btnAddSong_Click(object sender, EventArgs e)
         {
             using (var formEdit = new FormEditSong())
             {
                 if (formEdit.ShowDialog() == DialogResult.OK)
                 {
-                    LoadSongs();
+                    LoadData();
                 }
             }
         }
@@ -286,7 +192,7 @@ namespace HaNgi
             {
                 if (formEdit.ShowDialog() == DialogResult.OK)
                 {
-                    LoadPlaylists();
+                    LoadData();
                 }
             }
         }
@@ -329,80 +235,98 @@ namespace HaNgi
                 return;
             }
 
-            string titleToDelete = (selectedCard is SongCard sc) ? sc.Title : (selectedCard as PlaylistCard)?.PlaylistName;
-
-            if (UIMessageBox.ShowAsk($"Bạn có chắc chắn muốn xóa '{titleToDelete}' không?"))
+            if (selectedCard is SongCard songCard)
             {
-                if (selectedCard is SongCard songCard)
-                {
-                    var songToDelete = GetFullSongInfoFromDb(songCard.SongID);
-                    if (songToDelete != null)
-                    {
-                        if (DeleteFromDatabase("Song", "SongID", songCard.SongID))
-                        {
-                            try
-                            {
-                                if (!string.IsNullOrEmpty(songToDelete.FilePath) && File.Exists(songToDelete.FilePath)) File.Delete(songToDelete.FilePath);
-                                if (!string.IsNullOrEmpty(songToDelete.CoverPath) && File.Exists(songToDelete.CoverPath)) File.Delete(songToDelete.CoverPath);
-                            }
-                            catch (Exception ex)
-                            {
-                                UIMessageBox.ShowError("Đã xóa khỏi thư viện nhưng không thể xóa file vật lý:\n" + ex.Message);
-                            }
+                HandleDeleteSong(songCard);
+            }
+            else if (selectedCard is PlaylistCard playlistCard)
+            {
+                HandleDeletePlaylist(playlistCard);
+            }
+        }
 
-                            LoadData();
-                        }
-                    }
+        private void HandleDeleteSong(SongCard songCard)
+        {
+            string titleToDelete = songCard.Title;
+
+            // Bước 1: Kiểm tra xem bài hát có đang phát không
+            if (_playerForm != null && _playerForm.CurrentlyPlayingSongId == songCard.SongID)
+            {
+                // Bước 2: Hiển thị cảnh báo theo yêu cầu của bạn
+                if (UIMessageBox.ShowAsk($"Bài hát '{titleToDelete}' đang phát.\nĐể xóa, bạn cần dừng phát bài hát này. Bạn có muốn tiếp tục không?"))
+                {
+                    // Bước 3: Dừng trình phát và reset giao diện Player
+                    _playerForm.StopPlayerAndReset();
+                    // Chờ một chút để hệ thống giải phóng file
+                    System.Threading.Thread.Sleep(200);
                 }
-                else if (selectedCard is PlaylistCard playlistCard)
+                else
                 {
-                    var playlistToDelete = GetFullPlaylistInfoFromDb(playlistCard.PlaylistID);
-                    if (playlistToDelete != null)
-                    {
-                        if (DeleteFromDatabase("Playlist", "PlaylistID", playlistCard.PlaylistID))
-                        {
-                            try
-                            {
-                                if (!string.IsNullOrEmpty(playlistToDelete.PlaylistImage) && File.Exists(playlistToDelete.PlaylistImage)) File.Delete(playlistToDelete.PlaylistImage);
-                            }
-                            catch (Exception ex)
-                            {
-                                UIMessageBox.ShowError("Đã xóa playlist nhưng không thể xóa file ảnh bìa:\n" + ex.Message);
-                            }
+                    return; // Người dùng chọn "Không", không làm gì cả
+                }
+            }
 
-                            LoadData();
+            // Bước 4: Hỏi lại lần nữa để xác nhận xóa (kể cả khi không phát nhạc)
+            if (UIMessageBox.ShowAsk($"Bạn có chắc chắn muốn xóa vĩnh viễn '{titleToDelete}' không?"))
+            {
+                var songToDelete = DataAccess.GetSongById(songCard.SongID);
+                if (songToDelete != null)
+                {
+                    if (DataAccess.DeleteSong(songCard.SongID))
+                    {
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(songToDelete.FilePath) && File.Exists(songToDelete.FilePath))
+                            {
+                                File.Delete(songToDelete.FilePath);
+                            }
+                            if (!string.IsNullOrEmpty(songToDelete.CoverPath) && File.Exists(songToDelete.CoverPath))
+                            {
+                                File.Delete(songToDelete.CoverPath);
+                            }
+                            UIMessageBox.ShowSuccess("Xóa thành công!");
                         }
+                        catch (Exception ex)
+                        {
+                            UIMessageBox.ShowWarning("Đã xóa khỏi thư viện nhưng không thể xóa file vật lý:\n" + ex.Message);
+                        }
+                        LoadData(); // Tải lại dữ liệu
                     }
                 }
             }
         }
 
-        private bool DeleteFromDatabase(string tableName, string idColumnName, int id)
+        private void HandleDeletePlaylist(PlaylistCard playlistCard)
         {
-            using (var conn = DatabaseHelper.GetConnection())
-            using (var cmd = new SqlCommand($"DELETE FROM dbo.{tableName} WHERE {idColumnName} = @ID", conn))
+            if (UIMessageBox.ShowAsk($"Bạn có chắc chắn muốn xóa playlist '{playlistCard.PlaylistName}' không?"))
             {
-                cmd.Parameters.AddWithValue("@ID", id);
-                try
+                var playlistToDelete = DataAccess.GetPlaylistById(playlistCard.PlaylistID);
+                if (playlistToDelete != null)
                 {
-                    conn.Open();
-                    if (cmd.ExecuteNonQuery() > 0)
+                    if (DataAccess.DeletePlaylist(playlistCard.PlaylistID))
                     {
-                        UIMessageBox.ShowSuccess("Xóa thành công!");
-                        return true;
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(playlistToDelete.PlaylistImage) && File.Exists(playlistToDelete.PlaylistImage))
+                            {
+                                File.Delete(playlistToDelete.PlaylistImage);
+                            }
+                            UIMessageBox.ShowSuccess("Xóa playlist thành công!");
+                        }
+                        catch (Exception ex)
+                        {
+                            UIMessageBox.ShowWarning("Đã xóa playlist nhưng không thể xóa file ảnh bìa:\n" + ex.Message);
+                        }
+                        LoadData();
                     }
                 }
-                catch (Exception ex)
-                {
-                    UIMessageBox.ShowError("Lỗi khi xóa khỏi CSDL: " + ex.Message);
-                }
             }
-            return false;
         }
 
         private void uiPanel1_Click(object sender, EventArgs e)
         {
-
+            // Bỏ chọn khi click vào nền
+            ClearSelection();
         }
     }
 }

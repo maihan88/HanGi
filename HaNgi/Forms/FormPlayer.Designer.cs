@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPlayer));
             this.timer = new Sunny.UI.UIMillisecondTimer(this.components);
             this.pnlBottomControls = new Sunny.UI.UIPanel();
             this.trackVolume = new Sunny.UI.UITrackBar();
@@ -69,7 +70,6 @@
             // timer
             // 
             this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // pnlBottomControls
             // 
@@ -86,12 +86,14 @@
             this.pnlBottomControls.Controls.Add(this.trackProgress);
             this.pnlBottomControls.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBottomControls.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.pnlBottomControls.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.pnlBottomControls.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.pnlBottomControls.Location = new System.Drawing.Point(0, 476);
             this.pnlBottomControls.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlBottomControls.MinimumSize = new System.Drawing.Size(1, 1);
             this.pnlBottomControls.Name = "pnlBottomControls";
             this.pnlBottomControls.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.pnlBottomControls.RectDisableColor = System.Drawing.Color.Transparent;
             this.pnlBottomControls.Size = new System.Drawing.Size(973, 189);
             this.pnlBottomControls.TabIndex = 1;
             this.pnlBottomControls.Text = null;
@@ -101,7 +103,7 @@
             // 
             this.trackVolume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.trackVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.trackVolume.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(61)))));
+            this.trackVolume.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.trackVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.trackVolume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(127)))));
             this.trackVolume.Location = new System.Drawing.Point(61, 8);
@@ -125,6 +127,7 @@
             this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton1.Name = "uiSymbolButton1";
             this.uiSymbolButton1.RectColor = System.Drawing.Color.Transparent;
+            this.uiSymbolButton1.RectDisableColor = System.Drawing.Color.Transparent;
             this.uiSymbolButton1.Size = new System.Drawing.Size(50, 50);
             this.uiSymbolButton1.Symbol = 57449;
             this.uiSymbolButton1.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -146,6 +149,7 @@
             this.btnSettings.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.RectColor = System.Drawing.Color.Transparent;
+            this.btnSettings.RectDisableColor = System.Drawing.Color.Transparent;
             this.btnSettings.Size = new System.Drawing.Size(50, 50);
             this.btnSettings.Symbol = 61459;
             this.btnSettings.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -168,6 +172,7 @@
             this.btnLoop.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnLoop.Name = "btnLoop";
             this.btnLoop.RectColor = System.Drawing.Color.Transparent;
+            this.btnLoop.RectDisableColor = System.Drawing.Color.Transparent;
             this.btnLoop.Size = new System.Drawing.Size(50, 50);
             this.btnLoop.Symbol = 557408;
             this.btnLoop.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -190,6 +195,7 @@
             this.btnNext.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnNext.Name = "btnNext";
             this.btnNext.RectColor = System.Drawing.Color.Transparent;
+            this.btnNext.RectDisableColor = System.Drawing.Color.Transparent;
             this.btnNext.Size = new System.Drawing.Size(50, 50);
             this.btnNext.Symbol = 61518;
             this.btnNext.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -212,6 +218,7 @@
             this.btnPlayPause.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnPlayPause.Name = "btnPlayPause";
             this.btnPlayPause.RectColor = System.Drawing.Color.Transparent;
+            this.btnPlayPause.RectDisableColor = System.Drawing.Color.Transparent;
             this.btnPlayPause.Size = new System.Drawing.Size(50, 50);
             this.btnPlayPause.Symbol = 61515;
             this.btnPlayPause.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -234,6 +241,7 @@
             this.btnPrevious.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.RectColor = System.Drawing.Color.Transparent;
+            this.btnPrevious.RectDisableColor = System.Drawing.Color.Transparent;
             this.btnPrevious.Size = new System.Drawing.Size(50, 50);
             this.btnPrevious.Symbol = 61514;
             this.btnPrevious.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -256,6 +264,7 @@
             this.btnShuffle.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnShuffle.Name = "btnShuffle";
             this.btnShuffle.RectColor = System.Drawing.Color.Transparent;
+            this.btnShuffle.RectDisableColor = System.Drawing.Color.Transparent;
             this.btnShuffle.Size = new System.Drawing.Size(50, 50);
             this.btnShuffle.Symbol = 361556;
             this.btnShuffle.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -296,7 +305,7 @@
             this.trackProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackProgress.BackColor = System.Drawing.Color.Transparent;
-            this.trackProgress.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.trackProgress.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.trackProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.trackProgress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(127)))));
             this.trackProgress.Location = new System.Drawing.Point(269, 23);
@@ -415,6 +424,7 @@
             this.lblInfoArtist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.lblInfoArtist.Location = new System.Drawing.Point(0, 284);
             this.lblInfoArtist.Name = "lblInfoArtist";
+            this.lblInfoArtist.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.lblInfoArtist.Size = new System.Drawing.Size(249, 52);
             this.lblInfoArtist.TabIndex = 2;
             this.lblInfoArtist.Text = "Nghệ sĩ";
@@ -427,11 +437,11 @@
             this.lblInfoSongName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.lblInfoSongName.Location = new System.Drawing.Point(0, 217);
             this.lblInfoSongName.Name = "lblInfoSongName";
-            this.lblInfoSongName.Size = new System.Drawing.Size(249, 54);
+            this.lblInfoSongName.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            this.lblInfoSongName.Size = new System.Drawing.Size(249, 79);
             this.lblInfoSongName.TabIndex = 1;
             this.lblInfoSongName.Text = "Tên bài hát";
             this.lblInfoSongName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblInfoSongName.Click += new System.EventHandler(this.lblInfoSongName_Click);
             // 
             // avatarInfo
             // 
@@ -534,6 +544,7 @@
             this.Controls.Add(this.pnlRightInfo);
             this.Controls.Add(this.pnlQueue);
             this.Controls.Add(this.pnlBottomControls);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPlayer";
             this.Text = "FormPlayer";
             this.ZoomScaleRect = new System.Drawing.Rectangle(19, 19, 800, 450);

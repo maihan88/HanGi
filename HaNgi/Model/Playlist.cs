@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HaNgi
 {
-    internal class Playlist
+    public class Playlist
     {
         public int PlaylistID { get; set; }
         public string PlaylistName { get; set; }

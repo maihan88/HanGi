@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSearch));
             this.txtSearchQuery = new Sunny.UI.UITextBox();
             this.btnSearch = new Sunny.UI.UISymbolButton();
             this.flpResults = new System.Windows.Forms.FlowLayoutPanel();
@@ -86,6 +87,7 @@
             this.Controls.Add(this.flpResults);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearchQuery);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSearch";
             this.Text = "FormSearch";
             this.Initialize += new System.EventHandler(this.FormSearch_Initialize);

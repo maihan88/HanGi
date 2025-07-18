@@ -111,6 +111,7 @@
             this.NameApp.Name = "NameApp";
             this.NameApp.Symbol = 0;
             this.NameApp.SymbolColor = System.Drawing.Color.White;
+            this.NameApp.SymbolSize = 0;
             // 
             // MainForm
             // 

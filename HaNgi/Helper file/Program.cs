@@ -13,7 +13,7 @@ namespace HaNgi
             Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
-            PathHelper.EnsureAppFoldersExist();
+            PathHelper.EnsureAppFoldersExist(); 
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

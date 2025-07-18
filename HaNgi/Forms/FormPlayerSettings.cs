@@ -55,7 +55,6 @@ namespace HaNgi
 
         private void RadioButton_Theme_Changed(object sender, bool value)
         {
-            // Chỉ xử lý khi RadioButton được CHỌN (khi value trở thành true)
             if (value)
             {
                 var selectedRadioButton = sender as UIRadioButton;

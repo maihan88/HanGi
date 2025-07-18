@@ -18,14 +18,12 @@
         private void InitializeComponent()
         {
             this.avatarCover = new Sunny.UI.UIAvatar();
-            this.lblPlaylistName = new Sunny.UI.UILabel();
             this.lblSongPreview = new Sunny.UI.UILabel();
+            this.lblPlaylistName = new Sunny.UI.UILabel();
             this.SuspendLayout();
             // 
             // avatarCover
             // 
-            this.avatarCover.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.avatarCover.AvatarSize = 150;
             this.avatarCover.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.avatarCover.Icon = Sunny.UI.UIAvatar.UIIcon.Image;
@@ -37,23 +35,10 @@
             this.avatarCover.TabIndex = 0;
             this.avatarCover.Text = "uiAvatar1";
             // 
-            // lblPlaylistName
-            // 
-            this.lblPlaylistName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPlaylistName.Font = new System.Drawing.Font("Lora", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlaylistName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.lblPlaylistName.Location = new System.Drawing.Point(165, 5);
-            this.lblPlaylistName.Name = "lblPlaylistName";
-            this.lblPlaylistName.Size = new System.Drawing.Size(330, 35);
-            this.lblPlaylistName.TabIndex = 1;
-            this.lblPlaylistName.Text = "Playlist Name";
-            this.lblPlaylistName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lblSongPreview
             // 
-            this.lblSongPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblSongPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSongPreview.Font = new System.Drawing.Font("Lora", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSongPreview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -62,6 +47,17 @@
             this.lblSongPreview.Size = new System.Drawing.Size(330, 115);
             this.lblSongPreview.TabIndex = 2;
             this.lblSongPreview.Text = "Song previews...";
+            // 
+            // lblPlaylistName
+            // 
+            this.lblPlaylistName.Font = new System.Drawing.Font("Lora", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlaylistName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.lblPlaylistName.Location = new System.Drawing.Point(165, 5);
+            this.lblPlaylistName.Name = "lblPlaylistName";
+            this.lblPlaylistName.Size = new System.Drawing.Size(330, 35);
+            this.lblPlaylistName.TabIndex = 1;
+            this.lblPlaylistName.Text = "Playlist Name";
+            this.lblPlaylistName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PlaylistCard
             // 
@@ -80,7 +76,7 @@
         #endregion
 
         private Sunny.UI.UIAvatar avatarCover;
-        private Sunny.UI.UILabel lblPlaylistName;
         private Sunny.UI.UILabel lblSongPreview;
+        private Sunny.UI.UILabel lblPlaylistName;
     }
 }

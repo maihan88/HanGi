@@ -34,6 +34,8 @@ namespace HaNgi
             formPlayer = new FormPlayer();
             formSearch = new FormSearch();
 
+            formHome.SetPlayerFormReference(formPlayer);
+
             homeTabPage = new TabPage("Trang chủ");
             EmbedPageIntoTab(formHome, homeTabPage);
 

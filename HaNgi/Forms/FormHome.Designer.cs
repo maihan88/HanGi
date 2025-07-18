@@ -89,12 +89,11 @@
             // 
             // flpPlaylists
             // 
-            this.flpPlaylists.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.flpPlaylists.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpPlaylists.AutoScroll = true;
             this.flpPlaylists.BackColor = System.Drawing.Color.Transparent;
-            this.flpPlaylists.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpPlaylists.ForeColor = System.Drawing.Color.White;
             this.flpPlaylists.Location = new System.Drawing.Point(17, 340);
             this.flpPlaylists.Name = "flpPlaylists";
             this.flpPlaylists.Size = new System.Drawing.Size(600, 250);
@@ -460,6 +459,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(973, 665);
             this.Controls.Add(this.uiPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormHome";
             this.PageIndex = 0;
             this.Tag = "1001";

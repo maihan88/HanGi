@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -13,8 +12,8 @@ namespace HaNgi
     {
         private bool isEditMode;
         private int editingSongId;
-        private string musicFileName;
-        private string coverFileName;
+        private string musicFileName; // Chỉ lưu tên file, không lưu đường dẫn tuyệt đối
+        private string coverFileName; // Chỉ lưu tên file
 
         public FormEditSong(int? songId = null)
         {
@@ -48,61 +47,120 @@ namespace HaNgi
 
         private void LoadSongDataForEditing()
         {
-            using (var conn = DatabaseHelper.GetConnection())
-            using (var cmd = new SqlCommand("SELECT * FROM dbo.Song WHERE SongID = @SongID", conn))
+            var song = DataAccess.GetSongById(editingSongId);
+            if (song == null)
             {
-                cmd.Parameters.AddWithValue("@SongID", editingSongId);
-                try
+                UIMessageBox.ShowError("Không tìm thấy bài hát để chỉnh sửa.");
+                this.Close();
+                return;
+            }
+
+            txtName.Text = song.SongName;
+            txtArtist.Text = song.Artist;
+            txtLyric.Text = song.FullLyric;
+
+            musicFileName = Path.GetFileName(song.FilePath);
+            coverFileName = Path.GetFileName(song.CoverPath);
+
+            txtFilePath.Text = musicFileName;
+
+            btnOpenMusicFolder.Enabled = !string.IsNullOrEmpty(musicFileName) && File.Exists(song.FilePath);
+            btnOpenCoverFolder.Enabled = !string.IsNullOrEmpty(coverFileName) && File.Exists(song.CoverPath);
+
+            LoadPreviewImage(song.CoverPath);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtArtist.Text))
+            {
+                UIMessageBox.ShowWarning("Vui lòng điền đầy đủ Tên và Nghệ sĩ.");
+                return;
+            }
+
+            string finalMusicFileName = this.musicFileName;
+            string finalCoverFileName = this.coverFileName;
+            string newMusicPathForCheck = this.musicFileName;
+
+            // Kiểm tra nếu người dùng chọn file nhạc mới
+            if (txtFilePath.Tag is string newMusicFullPath && !string.IsNullOrEmpty(newMusicFullPath))
+            {
+                newMusicPathForCheck = Path.GetFileName(newMusicFullPath);
+            }
+
+            if (string.IsNullOrEmpty(newMusicPathForCheck))
+            {
+                UIMessageBox.ShowWarning("Vui lòng chọn một file nhạc.");
+                return;
+            }
+
+            if (DataAccess.FilePathExists(newMusicPathForCheck, isEditMode ? (int?)editingSongId : null))
+            {
+                UIMessageBox.ShowWarning("File nhạc này đã được thêm vào thư viện!");
+                return;
+            }
+
+            // Sao chép file mới nếu có
+            if (txtFilePath.Tag is string newMusicPathToCopy && !string.IsNullOrEmpty(newMusicPathToCopy))
+            {
+                finalMusicFileName = PathHelper.CopyFileToAppFolder(newMusicPathToCopy, PathHelper.MusicFolderPath);
+            }
+            if (avatarPreview.Tag is string newCoverPath && !string.IsNullOrEmpty(newCoverPath))
+            {
+                finalCoverFileName = PathHelper.CopyFileToAppFolder(newCoverPath, PathHelper.CoversFolderPath);
+            }
+
+            if (string.IsNullOrEmpty(finalMusicFileName))
+            {
+                UIMessageBox.ShowWarning("Không thể xử lý file nhạc. Vui lòng thử lại.");
+                return;
+            }
+
+            int duration = 0;
+            try
+            {
+                using (var tagFile = TagLib.File.Create(PathHelper.GetAbsoluteMusicPath(finalMusicFileName)))
                 {
-                    conn.Open();
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            txtName.Text = reader["SongName"].ToString();
-                            txtArtist.Text = reader["Artist"].ToString();
-                            txtLyric.Text = reader["FullLyric"].ToString();
-                            musicFileName = reader["FilePath"].ToString();
-                            coverFileName = reader["CoverPath"].ToString();
-
-                            txtFilePath.Text = musicFileName;
-
-                            string absoluteMusicPath = PathHelper.GetAbsoluteMusicPath(musicFileName);
-                            btnOpenMusicFolder.Enabled = !string.IsNullOrEmpty(musicFileName) && File.Exists(absoluteMusicPath);
-
-                            string absoluteCoverPath = PathHelper.GetAbsoluteCoverPath(coverFileName);
-                            btnOpenCoverFolder.Enabled = !string.IsNullOrEmpty(coverFileName) && File.Exists(absoluteCoverPath);
-
-                            LoadPreviewImage(absoluteCoverPath);
-                        }
-                    }
+                    duration = (int)tagFile.Properties.Duration.TotalSeconds;
                 }
-                catch (Exception ex) { UIMessageBox.ShowError("Lỗi tải dữ liệu bài hát: " + ex.Message); this.Close(); }
+            }
+            catch
+            {
+                UIMessageBox.ShowWarning("Không thể đọc file nhạc. File có thể bị lỗi hoặc không được hỗ trợ.");
+                return;
+            }
+
+            var songToSave = new Song
+            {
+                SongID = this.editingSongId,
+                SongName = txtName.Text,
+                Artist = txtArtist.Text,
+                Duration = duration,
+                FilePath = finalMusicFileName, // Chỉ lưu tên file
+                CoverPath = finalCoverFileName, // Chỉ lưu tên file
+                FullLyric = txtLyric.Text
+            };
+
+            if (DataAccess.SaveSong(songToSave, isEditMode))
+            {
+                UIMessageBox.ShowSuccess("Lưu thông tin thành công!");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
 
+        // --- CÁC HÀM KHÁC GIỮ NGUYÊN ---
+        #region Other Event Handlers and Helper Methods
         private void btnOpenMusicFolder_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Process.Start("explorer.exe", PathHelper.MusicFolderPath);
-            }
-            catch (Exception ex)
-            {
-                UIMessageBox.ShowError("Không thể mở thư mục: " + ex.Message);
-            }
+            try { Process.Start("explorer.exe", PathHelper.MusicFolderPath); }
+            catch (Exception ex) { UIMessageBox.ShowError("Không thể mở thư mục: " + ex.Message); }
         }
 
         private void btnOpenCoverFolder_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Process.Start("explorer.exe", PathHelper.CoversFolderPath);
-            }
-            catch (Exception ex)
-            {
-                UIMessageBox.ShowError("Không thể mở thư mục: " + ex.Message);
-            }
+            try { Process.Start("explorer.exe", PathHelper.CoversFolderPath); }
+            catch (Exception ex) { UIMessageBox.ShowError("Không thể mở thư mục: " + ex.Message); }
         }
 
         private void btnSelectFile_Click(object sender, EventArgs e)
@@ -112,27 +170,16 @@ namespace HaNgi
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     txtFilePath.Text = Path.GetFileName(ofd.FileName);
-                    txtFilePath.Tag = ofd.FileName;
-
+                    txtFilePath.Tag = ofd.FileName; // Lưu đường dẫn đầy đủ vào Tag
                     btnOpenMusicFolder.Enabled = false;
 
                     try
                     {
                         var tagFile = TagLib.File.Create(ofd.FileName);
-                        if (!string.IsNullOrEmpty(tagFile.Tag.Title))
-                        {
-                            txtName.Text = tagFile.Tag.Title;
-                            txtName.ReadOnly = true;
-                        }
-
-                        if (!string.IsNullOrEmpty(tagFile.Tag.FirstPerformer))
-                        {
-                            txtArtist.Text = tagFile.Tag.FirstPerformer;
-                            txtArtist.ReadOnly = true;
-                        }
+                        if (!string.IsNullOrEmpty(tagFile.Tag.Title)) txtName.Text = tagFile.Tag.Title;
+                        if (!string.IsNullOrEmpty(tagFile.Tag.FirstPerformer)) txtArtist.Text = tagFile.Tag.FirstPerformer;
                     }
                     catch { /* Bỏ qua nếu không đọc được tag */ }
-
                     TryToAutoLoadLyrics(ofd.FileName);
                 }
             }
@@ -144,7 +191,7 @@ namespace HaNgi
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    avatarPreview.Tag = ofd.FileName;
+                    avatarPreview.Tag = ofd.FileName; // Lưu đường dẫn đầy đủ vào Tag
                     LoadPreviewImage(ofd.FileName);
                     btnOpenCoverFolder.Enabled = false;
                 }
@@ -166,89 +213,6 @@ namespace HaNgi
                 catch { avatarPreview.Image = null; }
             }
             else { avatarPreview.Image = null; }
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtArtist.Text))
-            {
-                UIMessageBox.ShowWarning("Vui lòng điền đầy đủ Tên và Nghệ sĩ.");
-                return;
-            }
-
-            string finalMusicFileName = this.musicFileName;
-            string finalCoverFileName = this.coverFileName;
-            string newMusicPathForCheck = this.musicFileName;
-
-            if (txtFilePath.Tag is string newMusicPath && !string.IsNullOrEmpty(newMusicPath))
-            {
-                finalMusicFileName = Path.GetFileName(newMusicPath);
-                newMusicPathForCheck = finalMusicFileName;
-            }
-
-            if (DataAccess.FilePathExists(newMusicPathForCheck, isEditMode ? (int?)editingSongId : null))
-            {
-                UIMessageBox.ShowWarning("File nhạc này đã được thêm vào thư viện!");
-                return;
-            }
-
-            if (txtFilePath.Tag is string newMusicPathToCopy && !string.IsNullOrEmpty(newMusicPathToCopy))
-            {
-                finalMusicFileName = PathHelper.CopyFileToAppFolder(newMusicPathToCopy, PathHelper.MusicFolderPath);
-            }
-            if (avatarPreview.Tag is string newCoverPath && !string.IsNullOrEmpty(newCoverPath))
-            {
-                finalCoverFileName = PathHelper.CopyFileToAppFolder(newCoverPath, PathHelper.CoversFolderPath);
-            }
-
-            if (string.IsNullOrEmpty(finalMusicFileName))
-            {
-                UIMessageBox.ShowWarning("Vui lòng chọn một file nhạc.");
-                return;
-            }
-
-            int duration = 0;
-            try
-            {
-                using (var tagFile = TagLib.File.Create(PathHelper.GetAbsoluteMusicPath(finalMusicFileName)))
-                {
-                    duration = (int)tagFile.Properties.Duration.TotalSeconds;
-                }
-            }
-            catch
-            {
-                UIMessageBox.ShowWarning("Không thể đọc file nhạc. File có thể bị lỗi hoặc không được hỗ trợ.");
-                return;
-            }
-
-            string query = isEditMode
-                ? "UPDATE dbo.Song SET SongName=@SongName, Artist=@Artist, Duration=@Duration, FilePath=@FilePath, CoverPath=@CoverPath, FullLyric=@FullLyric WHERE SongID=@SongID"
-                : "INSERT INTO dbo.Song (SongName, Artist, Duration, FilePath, CoverPath, FullLyric) VALUES (@SongName, @Artist, @Duration, @FilePath, @CoverPath, @FullLyric)";
-
-            using (var conn = DatabaseHelper.GetConnection())
-            using (var cmd = new SqlCommand(query, conn))
-            {
-                cmd.Parameters.AddWithValue("@SongName", txtName.Text);
-                cmd.Parameters.AddWithValue("@Artist", txtArtist.Text);
-                cmd.Parameters.AddWithValue("@Duration", duration);
-                cmd.Parameters.AddWithValue("@FilePath", finalMusicFileName);
-                cmd.Parameters.AddWithValue("@CoverPath", (object)finalCoverFileName ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@FullLyric", string.IsNullOrWhiteSpace(txtLyric.Text) ? (object)DBNull.Value : txtLyric.Text);
-
-                if (isEditMode) { cmd.Parameters.AddWithValue("@SongID", editingSongId); }
-
-                try
-                {
-                    conn.Open();
-                    if (cmd.ExecuteNonQuery() > 0)
-                    {
-                        UIMessageBox.ShowSuccess("Lưu thông tin thành công!");
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
-                    }
-                }
-                catch (Exception ex) { UIMessageBox.ShowError("Lỗi khi lưu vào CSDL: " + ex.Message); }
-            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -290,5 +254,6 @@ namespace HaNgi
             try { txtLyric.Text = File.ReadAllText(filePath, Encoding.UTF8); }
             catch (Exception ex) { UIMessageBox.ShowError("Không thể đọc file lời bài hát: " + ex.Message); }
         }
+        #endregion
     }
 }

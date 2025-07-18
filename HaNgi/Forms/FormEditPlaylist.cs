@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sunny.UI;
 
@@ -48,106 +43,88 @@ namespace HaNgi
         private void LoadAllSongsForNewPlaylist()
         {
             uiTransferSongs.ItemsLeft.Clear();
-            foreach (var song in GetAllSongsFromDB())
+            var allSongs = DataAccess.GetAllSongs(); // Lấy danh sách Song cơ bản
+            foreach (var song in allSongs)
             {
-                uiTransferSongs.ItemsLeft.Add(song);
+                uiTransferSongs.ItemsLeft.Add(new SongListItem
+                {
+                    SongID = song.SongID,
+                    DisplayName = $"{song.SongName} - {song.Artist}"
+                });
             }
         }
 
         private void LoadDataForEditing()
         {
-            var allSongs = GetAllSongsFromDB();
-            var playlistSongs = new List<SongListItem>();
-
-            using (var conn = DatabaseHelper.GetConnection())
+            var playlist = DataAccess.GetPlaylistById(editingPlaylistId);
+            if (playlist == null)
             {
-                conn.Open();
-                string query = "SELECT PlaylistName, PlaylistImage FROM dbo.Playlist WHERE PlaylistID = @ID";
-                using (var cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@ID", editingPlaylistId);
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            txtPlaylistName.Text = reader["PlaylistName"].ToString();
-                            var coverFileName = reader["PlaylistImage"].ToString();
-                            currentAbsoluteCoverPath = PathHelper.GetAbsoluteCoverPath(coverFileName);
-                            originalAbsoluteCoverPath = currentAbsoluteCoverPath;
-                            LoadPreviewImage(currentAbsoluteCoverPath);
-                        }
-                    }
-                }
-
-                query = @"SELECT s.SongID, s.SongName, s.Artist 
-                          FROM dbo.PlaylistSong ps JOIN dbo.Song s ON ps.SongID = s.SongID 
-                          WHERE ps.PlaylistID = @ID ORDER BY ps.OrderIndex";
-                using (var cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@ID", editingPlaylistId);
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            playlistSongs.Add(new SongListItem
-                            {
-                                SongID = reader.GetInt32(reader.GetOrdinal("SongID")),
-                                DisplayName = $"{reader["SongName"]} - {reader["Artist"]}"
-                            });
-                        }
-                    }
-                }
+                UIMessageBox.ShowError("Không tìm thấy playlist để chỉnh sửa.");
+                this.Close();
+                return;
             }
 
-            var songsNotInPlaylist = allSongs.Where(s => !playlistSongs.Any(ps => ps.SongID == s.SongID)).ToList();
+            txtPlaylistName.Text = playlist.PlaylistName;
+            currentAbsoluteCoverPath = playlist.PlaylistImage;
+            originalAbsoluteCoverPath = currentAbsoluteCoverPath;
+            LoadPreviewImage(currentAbsoluteCoverPath);
+
+            var allSongs = DataAccess.GetAllSongs().Select(s => new SongListItem { SongID = s.SongID, DisplayName = $"{s.SongName} - {s.Artist}" }).ToList();
+            var songsInPlaylist = DataAccess.GetSongsByPlaylistId(editingPlaylistId).Select(s => new SongListItem { SongID = s.SongID, DisplayName = $"{s.SongName} - {s.Artist}" }).ToList();
+
+            var songsNotInPlaylist = allSongs.Where(s => !songsInPlaylist.Any(ps => ps.SongID == s.SongID)).ToList();
+
             uiTransferSongs.ItemsLeft.Clear();
-            foreach (var s in songsNotInPlaylist)
-                uiTransferSongs.ItemsLeft.Add(s);
+            foreach (var s in songsNotInPlaylist) uiTransferSongs.ItemsLeft.Add(s);
 
             uiTransferSongs.ItemsRight.Clear();
-            foreach (var s in playlistSongs)
-                uiTransferSongs.ItemsRight.Add(s);
+            foreach (var s in songsInPlaylist) uiTransferSongs.ItemsRight.Add(s);
         }
 
-        private List<SongListItem> GetAllSongsFromDB()
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            var list = new List<SongListItem>();
-            string query = "SELECT SongID, SongName, Artist FROM dbo.Song";
-            using (var conn = DatabaseHelper.GetConnection())
-            using (var cmd = new SqlCommand(query, conn))
+            if (string.IsNullOrWhiteSpace(txtPlaylistName.Text))
             {
-                try
-                {
-                    conn.Open();
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            list.Add(new SongListItem
-                            {
-                                SongID = reader.GetInt32(reader.GetOrdinal("SongID")),
-                                DisplayName = $"{reader["SongName"]} - {reader["Artist"]}"
-                            });
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    UIMessageBox.ShowError("Lỗi tải danh sách bài hát: " + ex.Message);
-                }
+                UIMessageBox.ShowWarning("Tên playlist không được để trống!");
+                return;
             }
-            return list;
+
+            string coverFileNameToSave = "";
+            if (currentAbsoluteCoverPath != originalAbsoluteCoverPath && !string.IsNullOrEmpty(currentAbsoluteCoverPath))
+            {
+                coverFileNameToSave = PathHelper.CopyFileToAppFolder(currentAbsoluteCoverPath, PathHelper.CoversFolderPath);
+                if (string.IsNullOrEmpty(coverFileNameToSave)) return; // Lỗi sao chép file
+            }
+            else if (!string.IsNullOrEmpty(originalAbsoluteCoverPath))
+            {
+                coverFileNameToSave = Path.GetFileName(originalAbsoluteCoverPath);
+            }
+
+            var playlistToSave = new Playlist
+            {
+                PlaylistID = this.editingPlaylistId,
+                PlaylistName = txtPlaylistName.Text,
+                PlaylistImage = coverFileNameToSave
+            };
+
+            var songIdsInPlaylist = uiTransferSongs.ItemsRight.Cast<SongListItem>().Select(s => s.SongID).ToList();
+
+            if (DataAccess.SavePlaylist(playlistToSave, songIdsInPlaylist, isEditMode))
+            {
+                UIMessageBox.ShowSuccess("Lưu playlist thành công!");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
-        private void FormEditPlaylist_Load(object sender, EventArgs e)
-        {
-        }
+        // --- CÁC HÀM KHÁC GIỮ NGUYÊN ---
+        #region Other Event Handlers and Helper Methods
+        private void FormEditPlaylist_Load(object sender, EventArgs e) { }
 
         private void btnSelectCover_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog())
+            using (OpenFileDialog ofd = new OpenFileDialog { Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp" })
             {
-                ofd.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     currentAbsoluteCoverPath = ofd.FileName;
@@ -163,7 +140,6 @@ namespace HaNgi
                 try
                 {
                     byte[] imageBytes = File.ReadAllBytes(absolutePath);
-
                     using (MemoryStream ms = new MemoryStream(imageBytes))
                     {
                         avatarPreview.Image = Image.FromStream(ms);
@@ -181,25 +157,16 @@ namespace HaNgi
             }
         }
 
-        private void btnUp_Click(object sender, EventArgs e)
-        {
-            MoveItemInPlaylist(-1);
-        }
-
-        private void btnDown_Click(object sender, EventArgs e)
-        {
-            MoveItemInPlaylist(1);
-        }
+        private void btnUp_Click(object sender, EventArgs e) => MoveItemInPlaylist(-1);
+        private void btnDown_Click(object sender, EventArgs e) => MoveItemInPlaylist(1);
 
         private void MoveItemInPlaylist(int direction)
         {
             var listBox = uiTransferSongs.ListBoxRight;
-            if (listBox.SelectedItem == null || listBox.SelectedIndex < 0)
-                return;
+            if (listBox.SelectedItem == null || listBox.SelectedIndex < 0) return;
 
             int newIndex = listBox.SelectedIndex + direction;
-            if (newIndex < 0 || newIndex >= listBox.Items.Count)
-                return;
+            if (newIndex < 0 || newIndex >= listBox.Items.Count) return;
 
             object selected = listBox.SelectedItem;
             listBox.Items.Remove(selected);
@@ -207,94 +174,11 @@ namespace HaNgi
             listBox.SetSelected(newIndex, true);
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtPlaylistName.Text))
-            {
-                UIMessageBox.ShowWarning("Tên playlist không được để trống!");
-                return;
-            }
-
-            string coverFileNameToSave = "";
-
-            if (currentAbsoluteCoverPath != originalAbsoluteCoverPath && !string.IsNullOrEmpty(currentAbsoluteCoverPath))
-            {
-                coverFileNameToSave = PathHelper.CopyFileToAppFolder(currentAbsoluteCoverPath, PathHelper.CoversFolderPath);
-                if (string.IsNullOrEmpty(coverFileNameToSave))
-                {
-                    return;
-                }
-            }
-            else if (!string.IsNullOrEmpty(originalAbsoluteCoverPath))
-            {
-                coverFileNameToSave = Path.GetFileName(originalAbsoluteCoverPath);
-            }
-
-            var songsInPlaylist = uiTransferSongs.ItemsRight.Cast<SongListItem>().ToList();
-
-            using (var conn = DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-                SqlTransaction transaction = conn.BeginTransaction();
-                try
-                {
-                    if (!isEditMode)
-                    {
-                        string query = "INSERT INTO dbo.Playlist (PlaylistName, PlaylistImage) OUTPUT INSERTED.PlaylistID VALUES (@Name, @Image);";
-                        using (var cmd = new SqlCommand(query, conn, transaction))
-                        {
-                            cmd.Parameters.AddWithValue("@Name", txtPlaylistName.Text);
-                            cmd.Parameters.AddWithValue("@Image", string.IsNullOrEmpty(coverFileNameToSave) ? (object)DBNull.Value : coverFileNameToSave);
-                            editingPlaylistId = (int)cmd.ExecuteScalar();
-                        }
-                    }
-                    else
-                    {
-                        string query = "UPDATE dbo.Playlist SET PlaylistName = @Name, PlaylistImage = @Image WHERE PlaylistID = @ID;";
-                        using (var cmd = new SqlCommand(query, conn, transaction))
-                        {
-                            cmd.Parameters.AddWithValue("@Name", txtPlaylistName.Text);
-                            cmd.Parameters.AddWithValue("@Image", string.IsNullOrEmpty(coverFileNameToSave) ? (object)DBNull.Value : coverFileNameToSave);
-                            cmd.Parameters.AddWithValue("@ID", editingPlaylistId);
-                            cmd.ExecuteNonQuery();
-                        }
-                    }
-
-                    using (var cmd = new SqlCommand("DELETE FROM dbo.PlaylistSong WHERE PlaylistID = @PlaylistID;", conn, transaction))
-                    {
-                        cmd.Parameters.AddWithValue("@PlaylistID", editingPlaylistId);
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    for (int i = 0; i < songsInPlaylist.Count; i++)
-                    {
-                        string insertQuery = "INSERT INTO dbo.PlaylistSong (PlaylistID, SongID, OrderIndex) VALUES (@PlaylistID, @SongID, @OrderIndex);";
-                        using (var cmd = new SqlCommand(insertQuery, conn, transaction))
-                        {
-                            cmd.Parameters.AddWithValue("@PlaylistID", editingPlaylistId);
-                            cmd.Parameters.AddWithValue("@SongID", songsInPlaylist[i].SongID);
-                            cmd.Parameters.AddWithValue("@OrderIndex", i);
-                            cmd.ExecuteNonQuery();
-                        }
-                    }
-
-                    transaction.Commit();
-                    UIMessageBox.ShowSuccess("Lưu playlist thành công!");
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    UIMessageBox.ShowError("Lỗi khi lưu playlist: " + ex.Message);
-                }
-            }
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+        #endregion
     }
 }
