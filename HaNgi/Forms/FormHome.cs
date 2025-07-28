@@ -10,128 +10,155 @@ namespace HaNgi
 {
     public partial class FormHome : Sunny.UI.UIPage
     {
-        private UserControl selectedCard = null;
-        private FormPlayer _playerForm;
+        private UserControl selectedCard = null; // Lưu trữ thẻ (card) được chọn hiện tại
+        private FormPlayer _playerForm; // Tham chiếu đến form trình phát nhạc
 
         public FormHome()
         {
             InitializeComponent();
-            this.Load += FormHome_Load;
+            this.Load += FormHome_Load; // Đăng ký sự kiện Load cho form
         }
 
         private void FormHome_Load(object sender, EventArgs e)
         {
-            LoadData();
+            LoadData(); // Tải dữ liệu khi form được load
         }
 
+        /// <summary>
+        /// Thiết lập tham chiếu đến form trình phát nhạc.
+        /// </summary>
         public void SetPlayerFormReference(FormPlayer playerForm)
         {
             _playerForm = playerForm;
         }
 
+        /// <summary>
+        /// Tải dữ liệu bài hát và playlist, đồng thời xóa trạng thái chọn.
+        /// </summary>
         public void LoadData()
         {
-            LoadSongs();
-            LoadPlaylists();
-            ClearSelection();
+            LoadSongs(); // Tải danh sách bài hát
+            LoadPlaylists(); // Tải danh sách playlist
+            ClearSelection(); // Xóa trạng thái chọn
         }
 
+        /// <summary>
+        /// Xóa trạng thái chọn và ẩn các panel chi tiết.
+        /// </summary>
         private void ClearSelection()
         {
             selectedCard = null;
-            pnlSongDetails.Visible = false;
-            pnlPlaylistDetails.Visible = false;
+            pnlSongDetails.Visible = false; // Ẩn panel chi tiết bài hát
+            pnlPlaylistDetails.Visible = false; // Ẩn panel chi tiết playlist
         }
 
+        /// <summary>
+        /// Tải danh sách bài hát từ cơ sở dữ liệu và hiển thị trên giao diện.
+        /// </summary>
         private void LoadSongs()
         {
-            flpSongs.SuspendLayout();
-            flpSongs.Controls.Clear();
-            List<Song> allSongs = DataAccess.GetAllSongs();
+            flpSongs.SuspendLayout(); // Tạm dừng cập nhật giao diện để tăng hiệu suất
+            flpSongs.Controls.Clear(); // Xóa các control cũ
+            List<Song> allSongs = DataAccess.GetAllSongs(); // Lấy danh sách bài hát từ cơ sở dữ liệu
             foreach (var song in allSongs)
             {
                 var card = new SongCard();
-                card.SetData(song.SongID, song.SongName, song.Artist);
-                string absolutePath = PathHelper.GetAbsoluteCoverPath(song.CoverPath);
-                card.SetCoverImage(absolutePath);
-                card.Click += new EventHandler(SongCard_Click);
-                flpSongs.Controls.Add(card);
+                card.SetData(song.SongID, song.SongName, song.Artist); // Thiết lập dữ liệu cho thẻ bài hát
+                string absolutePath = PathHelper.GetAbsoluteCoverPath(song.CoverPath); // Lấy đường dẫn tuyệt đối của ảnh bìa
+                card.SetCoverImage(absolutePath); // Thiết lập ảnh bìa
+                card.Click += new EventHandler(SongCard_Click); // Đăng ký sự kiện click cho thẻ
+                flpSongs.Controls.Add(card); // Thêm thẻ vào giao diện
             }
-            flpSongs.ResumeLayout(true);
+            flpSongs.ResumeLayout(true); // Tiếp tục cập nhật giao diện
         }
 
+        /// <summary>
+        /// Tải danh sách playlist từ cơ sở dữ liệu và hiển thị trên giao diện.
+        /// </summary>
         private void LoadPlaylists()
         {
-            flpPlaylists.SuspendLayout();
-            flpPlaylists.Controls.Clear();
-            List<PlaylistCardData> allPlaylists = DataAccess.GetAllPlaylistsWithPreviews();
+            flpPlaylists.SuspendLayout(); // Tạm dừng cập nhật giao diện
+            flpPlaylists.Controls.Clear(); // Xóa các control cũ
+            List<PlaylistCardData> allPlaylists = DataAccess.GetAllPlaylistsWithPreviews(); // Lấy danh sách playlist từ cơ sở dữ liệu
             foreach (var pData in allPlaylists)
             {
                 var card = new PlaylistCard();
-                card.SetData(pData.PlaylistID, pData.PlaylistName, pData.SongPreviews);
-                string absolutePath = PathHelper.GetAbsoluteCoverPath(pData.PlaylistImage);
-                card.SetCoverImage(absolutePath);
-                card.Click += new EventHandler(PlaylistCard_Click);
-                flpPlaylists.Controls.Add(card);
+                card.SetData(pData.PlaylistID, pData.PlaylistName, pData.SongPreviews); // Thiết lập dữ liệu cho thẻ playlist
+                string absolutePath = PathHelper.GetAbsoluteCoverPath(pData.PlaylistImage); // Lấy đường dẫn tuyệt đối của ảnh bìa
+                card.SetCoverImage(absolutePath); // Thiết lập ảnh bìa
+                card.Click += new EventHandler(PlaylistCard_Click); // Đăng ký sự kiện click cho thẻ
+                flpPlaylists.Controls.Add(card); // Thêm thẻ vào giao diện
             }
-            flpPlaylists.ResumeLayout(true);
+            flpPlaylists.ResumeLayout(true); // Tiếp tục cập nhật giao diện
         }
 
+        /// <summary>
+        /// Xử lý sự kiện khi thẻ bài hát được click.
+        /// </summary>
         private void SongCard_Click(object sender, EventArgs e)
         {
-            selectedCard = sender as SongCard;
+            selectedCard = sender as SongCard; // Lưu thẻ được chọn
             if (selectedCard == null) return;
-            UpdateSongDetailsPanel();
-            pnlSongDetails.Visible = true;
-            pnlPlaylistDetails.Visible = false;
+            UpdateSongDetailsPanel(); // Cập nhật thông tin chi tiết bài hát
+            pnlSongDetails.Visible = true; // Hiển thị panel chi tiết bài hát
+            pnlPlaylistDetails.Visible = false; // Ẩn panel chi tiết playlist
         }
 
+        /// <summary>
+        /// Xử lý sự kiện khi thẻ playlist được click.
+        /// </summary>
         private void PlaylistCard_Click(object sender, EventArgs e)
         {
-            selectedCard = sender as PlaylistCard;
+            selectedCard = sender as PlaylistCard; // Lưu thẻ được chọn
             if (selectedCard == null) return;
-            UpdatePlaylistDetailsPanel();
-            pnlPlaylistDetails.Visible = true;
-            pnlSongDetails.Visible = false;
+            UpdatePlaylistDetailsPanel(); // Cập nhật thông tin chi tiết playlist
+            pnlPlaylistDetails.Visible = true; // Hiển thị panel chi tiết playlist
+            pnlSongDetails.Visible = false; // Ẩn panel chi tiết bài hát
         }
 
+        /// <summary>
+        /// Cập nhật thông tin chi tiết bài hát trên giao diện.
+        /// </summary>
         private void UpdateSongDetailsPanel()
         {
             if (!(selectedCard is SongCard songCard)) return;
-            var song = DataAccess.GetSongById(songCard.SongID);
+            var song = DataAccess.GetSongById(songCard.SongID); // Lấy thông tin bài hát từ cơ sở dữ liệu
             if (song == null) return;
 
-            detailLblSongName.Text = song.SongName;
-            detailLblArtist.Text = song.Artist;
-            TimeSpan time = TimeSpan.FromSeconds(song.Duration);
+            detailLblSongName.Text = song.SongName; // Hiển thị tên bài hát
+            detailLblArtist.Text = song.Artist; // Hiển thị tên nghệ sĩ
+            TimeSpan time = TimeSpan.FromSeconds(song.Duration); // Chuyển đổi thời lượng từ giây sang định dạng mm:ss
             detailLblDuration.Text = $"Thời lượng: {time:mm\\:ss}";
-            if (File.Exists(song.CoverPath))
+            if (File.Exists(song.CoverPath)) // Kiểm tra xem ảnh bìa có tồn tại không
             {
                 using (var img = Image.FromFile(song.CoverPath)) { detailAvatar.Image = new Bitmap(img); }
             }
             else
             {
                 detailAvatar.Image = null;
-                detailAvatar.Symbol = 61442;
+                detailAvatar.Symbol = 61442; // Biểu tượng mặc định nếu không có ảnh bìa
             }
         }
 
+        /// <summary>
+        /// Cập nhật thông tin chi tiết playlist trên giao diện.
+        /// </summary>
         private void UpdatePlaylistDetailsPanel()
         {
             if (!(selectedCard is PlaylistCard playlistCard)) return;
-            var playlist = DataAccess.GetPlaylistById(playlistCard.PlaylistID);
+            var playlist = DataAccess.GetPlaylistById(playlistCard.PlaylistID); // Lấy thông tin playlist từ cơ sở dữ liệu
             if (playlist == null) return;
 
-            playlistDetailLblName.Text = playlist.PlaylistName;
+            playlistDetailLblName.Text = playlist.PlaylistName; // Hiển thị tên playlist
 
-            var songsInPlaylist = DataAccess.GetSongsByPlaylistId(playlist.PlaylistID);
+            var songsInPlaylist = DataAccess.GetSongsByPlaylistId(playlist.PlaylistID); // Lấy danh sách bài hát trong playlist
             lstPlaylistSongsDetail.Items.Clear();
             foreach (var song in songsInPlaylist)
             {
-                lstPlaylistSongsDetail.Items.Add($"{song.SongName} - {song.Artist}");
+                lstPlaylistSongsDetail.Items.Add($"{song.SongName} - {song.Artist}"); // Hiển thị danh sách bài hát
             }
 
-            if (!string.IsNullOrEmpty(playlist.PlaylistImage) && File.Exists(playlist.PlaylistImage))
+            if (!string.IsNullOrEmpty(playlist.PlaylistImage) && File.Exists(playlist.PlaylistImage)) // Kiểm tra ảnh bìa
             {
                 try
                 {
@@ -142,7 +169,7 @@ namespace HaNgi
                 }
                 catch
                 {
-                    uiAvatar1.Image = null; uiAvatar1.Symbol = 61449;
+                    uiAvatar1.Image = null; uiAvatar1.Symbol = 61449; // Biểu tượng mặc định nếu không có ảnh bìa
                 }
             }
             else
@@ -151,52 +178,67 @@ namespace HaNgi
             }
         }
 
+        /// <summary>
+        /// Xử lý sự kiện khi nhấn nút phát bài hát.
+        /// </summary>
         private void btnPlaySong_Click(object sender, EventArgs e)
         {
             if (selectedCard is SongCard songCard)
             {
-                var song = DataAccess.GetSongById(songCard.SongID);
+                var song = DataAccess.GetSongById(songCard.SongID); // Lấy thông tin bài hát
                 if (song != null)
                 {
-                    PlayerService.RequestPlay(new List<Song> { song });
+                    PlayerService.RequestPlay(new List<Song> { song }); // Yêu cầu phát bài hát
                 }
             }
         }
 
+        /// <summary>
+        /// Xử lý sự kiện khi nhấn nút phát playlist.
+        /// </summary>
         private void btnPlayPlaylist_Click(object sender, EventArgs e)
         {
             if (selectedCard is PlaylistCard playlistCard)
             {
-                var songs = DataAccess.GetSongsByPlaylistId(playlistCard.PlaylistID);
+                var songs = DataAccess.GetSongsByPlaylistId(playlistCard.PlaylistID); // Lấy danh sách bài hát trong playlist
                 if (songs != null && songs.Any())
                 {
-                    PlayerService.RequestPlay(songs);
+                    PlayerService.RequestPlay(songs); // Yêu cầu phát playlist
                 }
             }
         }
 
+        /// <summary>
+        /// Xử lý sự kiện khi nhấn nút thêm bài hát.
+        /// </summary>
         private void btnAddSong_Click(object sender, EventArgs e)
         {
             using (var formEdit = new FormEditSong())
             {
-                if (formEdit.ShowDialog() == DialogResult.OK)
+                if (formEdit.ShowDialog() == DialogResult.OK) // Hiển thị form chỉnh sửa bài hát
                 {
-                    LoadData();
+                    LoadData(); // Tải lại dữ liệu sau khi thêm
                 }
             }
         }
 
+        /// <summary>
+        /// Xử lý sự kiện khi nhấn nút thêm playlist.
+        /// </summary>
         private void btnAddPlaylist_Click(object sender, EventArgs e)
         {
             using (FormEditPlaylist formEdit = new FormEditPlaylist())
             {
-                if (formEdit.ShowDialog() == DialogResult.OK)
+                if (formEdit.ShowDialog() == DialogResult.OK) // Hiển thị form chỉnh sửa playlist
                 {
-                    LoadData();
+                    LoadData(); // Tải lại dữ liệu sau khi thêm
                 }
             }
         }
 
+        /// <summary>
+        /// Xử lý sự kiện khi nhấn nút sửa bài hát hoặc playlist.
+        /// </summary>
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (selectedCard == null)
@@ -211,7 +253,7 @@ namespace HaNgi
                 {
                     if (formEdit.ShowDialog() == DialogResult.OK)
                     {
-                        LoadData();
+                        LoadData(); // Tải lại dữ liệu sau khi sửa
                     }
                 }
             }
@@ -221,12 +263,15 @@ namespace HaNgi
                 {
                     if (formEdit.ShowDialog() == DialogResult.OK)
                     {
-                        LoadData();
+                        LoadData(); // Tải lại dữ liệu sau khi sửa
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Xử lý sự kiện khi nhấn nút xóa bài hát hoặc playlist.
+        /// </summary>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (selectedCard == null)
@@ -237,28 +282,29 @@ namespace HaNgi
 
             if (selectedCard is SongCard songCard)
             {
-                HandleDeleteSong(songCard);
+                HandleDeleteSong(songCard); // Xử lý xóa bài hát
             }
             else if (selectedCard is PlaylistCard playlistCard)
             {
-                HandleDeletePlaylist(playlistCard);
+                HandleDeletePlaylist(playlistCard); // Xử lý xóa playlist
             }
         }
 
+        /// <summary>
+        /// Xử lý xóa bài hát, bao gồm kiểm tra trạng thái phát và xóa file vật lý.
+        /// </summary>
         private void HandleDeleteSong(SongCard songCard)
         {
             string titleToDelete = songCard.Title;
 
-            // Bước 1: Kiểm tra xem bài hát có đang phát không
+            // Kiểm tra xem bài hát có đang phát không
             if (_playerForm != null && _playerForm.CurrentlyPlayingSongId == songCard.SongID)
             {
-                // Bước 2: Hiển thị cảnh báo theo yêu cầu của bạn
+                // Hiển thị cảnh báo nếu bài hát đang phát
                 if (UIMessageBox.ShowAsk($"Bài hát '{titleToDelete}' đang phát.\nĐể xóa, bạn cần dừng phát bài hát này. Bạn có muốn tiếp tục không?"))
                 {
-                    // Bước 3: Dừng trình phát và reset giao diện Player
-                    _playerForm.StopPlayerAndReset();
-                    // Chờ một chút để hệ thống giải phóng file
-                    System.Threading.Thread.Sleep(200);
+                    _playerForm.StopPlayerAndReset(); // Dừng trình phát và reset giao diện
+                    System.Threading.Thread.Sleep(200); // Chờ để hệ thống giải phóng file
                 }
                 else
                 {
@@ -266,16 +312,17 @@ namespace HaNgi
                 }
             }
 
-            // Bước 4: Hỏi lại lần nữa để xác nhận xóa (kể cả khi không phát nhạc)
+            // Hỏi lại lần nữa để xác nhận xóa
             if (UIMessageBox.ShowAsk($"Bạn có chắc chắn muốn xóa vĩnh viễn '{titleToDelete}' không?"))
             {
                 var songToDelete = DataAccess.GetSongById(songCard.SongID);
                 if (songToDelete != null)
                 {
-                    if (DataAccess.DeleteSong(songCard.SongID))
+                    if (DataAccess.DeleteSong(songCard.SongID)) // Xóa bài hát khỏi cơ sở dữ liệu
                     {
                         try
                         {
+                            // Xóa file vật lý nếu tồn tại
                             if (!string.IsNullOrEmpty(songToDelete.FilePath) && File.Exists(songToDelete.FilePath))
                             {
                                 File.Delete(songToDelete.FilePath);
@@ -296,6 +343,9 @@ namespace HaNgi
             }
         }
 
+        /// <summary>
+        /// Xử lý xóa playlist, bao gồm xóa file ảnh bìa nếu có.
+        /// </summary>
         private void HandleDeletePlaylist(PlaylistCard playlistCard)
         {
             if (UIMessageBox.ShowAsk($"Bạn có chắc chắn muốn xóa playlist '{playlistCard.PlaylistName}' không?"))
@@ -303,10 +353,11 @@ namespace HaNgi
                 var playlistToDelete = DataAccess.GetPlaylistById(playlistCard.PlaylistID);
                 if (playlistToDelete != null)
                 {
-                    if (DataAccess.DeletePlaylist(playlistCard.PlaylistID))
+                    if (DataAccess.DeletePlaylist(playlistCard.PlaylistID)) // Xóa playlist khỏi cơ sở dữ liệu
                     {
                         try
                         {
+                            // Xóa file ảnh bìa nếu tồn tại
                             if (!string.IsNullOrEmpty(playlistToDelete.PlaylistImage) && File.Exists(playlistToDelete.PlaylistImage))
                             {
                                 File.Delete(playlistToDelete.PlaylistImage);
@@ -317,16 +368,18 @@ namespace HaNgi
                         {
                             UIMessageBox.ShowWarning("Đã xóa playlist nhưng không thể xóa file ảnh bìa:\n" + ex.Message);
                         }
-                        LoadData();
+                        LoadData(); // Tải lại dữ liệu
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Xử lý sự kiện khi click vào nền để bỏ chọn.
+        /// </summary>
         private void uiPanel1_Click(object sender, EventArgs e)
         {
-            // Bỏ chọn khi click vào nền
-            ClearSelection();
+            ClearSelection(); // Xóa trạng thái chọn
         }
     }
 }

@@ -136,6 +136,7 @@
             this.txtFilePath.Radius = 20;
             this.txtFilePath.ReadOnly = true;
             this.txtFilePath.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.txtFilePath.ScrollBarHandleWidth = 1;
             this.txtFilePath.ShowText = false;
             this.txtFilePath.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -282,10 +283,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(56)))));
             resources.ApplyResources(this, "$this");
+            this.ControlBox = false;
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormEditSong";
-            this.TitleFont = new System.Drawing.Font("Lora Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.TitleFont = new System.Drawing.Font("Lora", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ZoomScaleRect = new System.Drawing.Rectangle(19, 19, 800, 450);
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel1.PerformLayout();

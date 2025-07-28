@@ -141,7 +141,6 @@
             this.pnlPlaylistDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlPlaylistDetails.MinimumSize = new System.Drawing.Size(1, 1);
             this.pnlPlaylistDetails.Name = "pnlPlaylistDetails";
-            this.pnlPlaylistDetails.Radius = 20;
             this.pnlPlaylistDetails.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
             this.pnlPlaylistDetails.Size = new System.Drawing.Size(305, 596);
             this.pnlPlaylistDetails.TabIndex = 7;
@@ -197,6 +196,7 @@
             this.playlistDetailLblName.ForeColor = System.Drawing.Color.White;
             this.playlistDetailLblName.Location = new System.Drawing.Point(0, 203);
             this.playlistDetailLblName.Name = "playlistDetailLblName";
+            this.playlistDetailLblName.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.playlistDetailLblName.Size = new System.Drawing.Size(305, 41);
             this.playlistDetailLblName.TabIndex = 1;
             this.playlistDetailLblName.Text = "Tên playlist";
@@ -235,7 +235,6 @@
             this.pnlSongDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlSongDetails.MinimumSize = new System.Drawing.Size(1, 1);
             this.pnlSongDetails.Name = "pnlSongDetails";
-            this.pnlSongDetails.Radius = 20;
             this.pnlSongDetails.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
             this.pnlSongDetails.Size = new System.Drawing.Size(305, 596);
             this.pnlSongDetails.TabIndex = 6;
@@ -270,6 +269,7 @@
             this.detailLblDuration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.detailLblDuration.Location = new System.Drawing.Point(0, 320);
             this.detailLblDuration.Name = "detailLblDuration";
+            this.detailLblDuration.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.detailLblDuration.Size = new System.Drawing.Size(302, 30);
             this.detailLblDuration.TabIndex = 3;
             this.detailLblDuration.Text = "Thời lượng";
@@ -284,6 +284,7 @@
             this.detailLblArtist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.detailLblArtist.Location = new System.Drawing.Point(-3, 274);
             this.detailLblArtist.Name = "detailLblArtist";
+            this.detailLblArtist.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.detailLblArtist.Size = new System.Drawing.Size(305, 30);
             this.detailLblArtist.TabIndex = 2;
             this.detailLblArtist.Text = "Nghệ sĩ";
@@ -294,10 +295,11 @@
             this.detailLblSongName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.detailLblSongName.BackColor = System.Drawing.Color.Transparent;
-            this.detailLblSongName.Font = new System.Drawing.Font("Lora", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailLblSongName.Font = new System.Drawing.Font("Lora", 12F, System.Drawing.FontStyle.Bold);
             this.detailLblSongName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.detailLblSongName.Location = new System.Drawing.Point(3, 214);
             this.detailLblSongName.Name = "detailLblSongName";
+            this.detailLblSongName.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.detailLblSongName.Size = new System.Drawing.Size(299, 60);
             this.detailLblSongName.TabIndex = 1;
             this.detailLblSongName.Text = "Tên bài hát";

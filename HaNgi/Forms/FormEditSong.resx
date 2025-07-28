@@ -123,10 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="uiLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora SemiBold, 12pt, style=Bold</value>
+    <value>Lora SemiBold, 11.999999pt, style=Bold</value>
   </data>
   <data name="uiLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 21</value>
+    <value>203, 19</value>
   </data>
   <data name="uiLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 30</value>
@@ -179,6 +179,174 @@
   </data>
   <data name="&gt;&gt;avatarPreview.ZOrder" xml:space="preserve">
     <value>11</value>
+  </data>
+  <data name="&gt;&gt;btnOpenCoverFolder.Name" xml:space="preserve">
+    <value>btnOpenCoverFolder</value>
+  </data>
+  <data name="&gt;&gt;btnOpenCoverFolder.Type" xml:space="preserve">
+    <value>Sunny.UI.UISymbolButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnOpenCoverFolder.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnOpenCoverFolder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMusicFolder.Name" xml:space="preserve">
+    <value>btnOpenMusicFolder</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMusicFolder.Type" xml:space="preserve">
+    <value>Sunny.UI.UISymbolButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMusicFolder.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMusicFolder.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtFilePath.Name" xml:space="preserve">
+    <value>txtFilePath</value>
+  </data>
+  <data name="&gt;&gt;txtFilePath.Type" xml:space="preserve">
+    <value>Sunny.UI.UIRichTextBox, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;txtFilePath.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;txtFilePath.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Name" xml:space="preserve">
+    <value>btnSelectFile</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Type" xml:space="preserve">
+    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnSelectCover.Name" xml:space="preserve">
+    <value>btnSelectCover</value>
+  </data>
+  <data name="&gt;&gt;btnSelectCover.Type" xml:space="preserve">
+    <value>Sunny.UI.UIButton, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;btnSelectCover.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnSelectCover.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;uiLabel3.Name" xml:space="preserve">
+    <value>uiLabel3</value>
+  </data>
+  <data name="&gt;&gt;uiLabel3.Type" xml:space="preserve">
+    <value>Sunny.UI.UILabel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;uiLabel3.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;uiLabel3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtArtist.Name" xml:space="preserve">
+    <value>txtArtist</value>
+  </data>
+  <data name="&gt;&gt;txtArtist.Type" xml:space="preserve">
+    <value>Sunny.UI.UITextBox, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;txtArtist.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;txtArtist.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;uiLabel2.Name" xml:space="preserve">
+    <value>uiLabel2</value>
+  </data>
+  <data name="&gt;&gt;uiLabel2.Type" xml:space="preserve">
+    <value>Sunny.UI.UILabel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;uiLabel2.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;uiLabel2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txtName.Name" xml:space="preserve">
+    <value>txtName</value>
+  </data>
+  <data name="&gt;&gt;txtName.Type" xml:space="preserve">
+    <value>Sunny.UI.UITextBox, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;txtName.Parent" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;txtName.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="uiPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="uiPanel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="uiPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 35</value>
+  </data>
+  <data name="uiPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="uiPanel1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="uiPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>685, 665</value>
+  </data>
+  <data name="uiPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="uiPanel1.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;uiPanel1.Name" xml:space="preserve">
+    <value>uiPanel1</value>
+  </data>
+  <data name="&gt;&gt;uiPanel1.Type" xml:space="preserve">
+    <value>Sunny.UI.UIPanel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;uiPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;uiPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btnOpenCoverFolder.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -277,7 +445,7 @@
     <value>Left, Right</value>
   </data>
   <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora Medium, 12pt, style=Bold</value>
+    <value>Lora, 11.999999pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>377, 446</value>
@@ -310,7 +478,7 @@
     <value>Left, Right</value>
   </data>
   <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora Medium, 12pt, style=Bold</value>
+    <value>Lora, 11.999999pt</value>
   </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>134, 446</value>
@@ -343,7 +511,7 @@
     <value>Top, Right</value>
   </data>
   <data name="btnSelectFile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora Medium, 12pt, style=Bold</value>
+    <value>Lora, 11.999999pt</value>
   </data>
   <data name="btnSelectFile.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 308</value>
@@ -373,7 +541,7 @@
     <value>5</value>
   </data>
   <data name="btnSelectCover.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora Medium, 12pt, style=Bold</value>
+    <value>Lora, 11.999999pt</value>
   </data>
   <data name="btnSelectCover.Location" type="System.Drawing.Point, System.Drawing">
     <value>26, 192</value>
@@ -406,7 +574,7 @@
     <value>True</value>
   </data>
   <data name="uiLabel3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora SemiBold, 12pt, style=Bold</value>
+    <value>Lora SemiBold, 11.999999pt, style=Bold</value>
   </data>
   <data name="uiLabel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 268</value>
@@ -472,7 +640,7 @@
     <value>True</value>
   </data>
   <data name="uiLabel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora SemiBold, 12pt, style=Bold</value>
+    <value>Lora SemiBold, 11.999999pt, style=Bold</value>
   </data>
   <data name="uiLabel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>203, 96</value>
@@ -533,42 +701,6 @@
   </data>
   <data name="&gt;&gt;txtName.ZOrder" xml:space="preserve">
     <value>10</value>
-  </data>
-  <data name="uiPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="uiPanel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="uiPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 35</value>
-  </data>
-  <data name="uiPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="uiPanel1.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="uiPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>685, 665</value>
-  </data>
-  <data name="uiPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="uiPanel1.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;uiPanel1.Name" xml:space="preserve">
-    <value>uiPanel1</value>
-  </data>
-  <data name="&gt;&gt;uiPanel1.Type" xml:space="preserve">
-    <value>Sunny.UI.UIPanel, SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="&gt;&gt;uiPanel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;uiPanel1.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;btnImportLyric.Name" xml:space="preserve">
     <value>btnImportLyric</value>
@@ -643,7 +775,7 @@
     <value>0</value>
   </data>
   <data name="btnImportLyric.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora Medium, 12pt, style=Bold</value>
+    <value>Lora, 11.999999pt</value>
   </data>
   <data name="btnImportLyric.Location" type="System.Drawing.Point, System.Drawing">
     <value>169, 12</value>
@@ -715,7 +847,7 @@
     <value>True</value>
   </data>
   <data name="uiLabel4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lora SemiBold, 12pt, style=Bold</value>
+    <value>Lora SemiBold, 11.999999pt, style=Bold</value>
   </data>
   <data name="uiLabel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 21</value>
