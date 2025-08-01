@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,13 +49,6 @@ namespace HaNgi
 
             // --- Sử dụng Biểu thức chính quy (Regular Expression - Regex) để phát hiện định dạng LRC ---
             // Regex này tìm kiếm các tag thời gian có dạng [mm:ss.xx] hoặc [mm:ss.xxx].
-            // \[: ký tự mở ngoặc vuông.
-            // (\d{2}): một nhóm (group 1) chứa đúng 2 chữ số (phút).
-            // : : ký tự hai chấm.
-            // (\d{2}): một nhóm (group 2) chứa đúng 2 chữ số (giây).
-            // \.: ký tự dấu chấm.
-            // (\d{2,3}): một nhóm (group 3) chứa từ 2 đến 3 chữ số (mili giây).
-            // \]: ký tự đóng ngoặc vuông.
             var lrcRegex = new Regex(@"\[(\d{2}):(\d{2})\.(\d{2,3})\]");
 
             // Kiểm tra xem có bất kỳ dòng nào khớp với định dạng LRC không.
@@ -63,7 +56,6 @@ namespace HaNgi
             {
                 IsTimedLyric = true;
                 // Regex này phức tạp hơn, nó bắt cả tag thời gian và phần nội dung lyric theo sau.
-                // (.*): một nhóm (group 4) bắt tất cả các ký tự còn lại trên dòng.
                 var regex = new Regex(@"\[(\d{2}):(\d{2})\.(\d{2,3})\](.*)");
 
                 // Tách toàn bộ văn bản thành các dòng riêng lẻ, loại bỏ các dòng trống.
@@ -76,7 +68,6 @@ namespace HaNgi
                         int minutes = int.Parse(match.Groups[1].Value);
                         int seconds = int.Parse(match.Groups[2].Value);
                         // Đảm bảo mili giây luôn có 3 chữ số bằng cách thêm '0' vào bên phải nếu cần.
-                        // Ví dụ: "45" -> "450".
                         int milliseconds = int.Parse(match.Groups[3].Value.PadRight(3, '0'));
 
                         // Tạo đối tượng TimeSpan từ các thành phần thời gian.
@@ -107,18 +98,13 @@ namespace HaNgi
         /// <returns>Toàn bộ lời bài hát dưới dạng một chuỗi, hoặc thông báo nếu không có lời.</returns>
         public string GetFullLyricText()
         {
-            // Sử dụng LINQ's Any() để kiểm tra danh sách có rỗng không.
             if (!ParsedLines.Any()) return "Không có lời cho bài hát này.";
 
-            // StringBuilder hiệu quả hơn việc cộng chuỗi liên tục vì nó không tạo ra các đối tượng chuỗi mới.
             var fullLyricsBuilder = new StringBuilder();
             foreach (var line in ParsedLines)
             {
-                // Ghi lại vị trí bắt đầu của dòng này trong chuỗi lớn.
                 line.StartIndex = fullLyricsBuilder.Length;
-                // Nối dòng lyric và ký tự xuống dòng vào chuỗi lớn.
                 fullLyricsBuilder.Append(line.Text + "\n");
-                // Ghi lại độ dài của dòng lyric (không tính ký tự xuống dòng).
                 line.Length = line.Text.Length;
             }
             return fullLyricsBuilder.ToString();
@@ -134,19 +120,14 @@ namespace HaNgi
             if (!IsTimedLyric || !ParsedLines.Any()) return -1;
 
             int newLyricIndex = -1;
-            // Duyệt qua danh sách các dòng lyric (đã được sắp xếp theo thời gian).
             for (int i = 0; i < ParsedLines.Count; i++)
             {
-                // Nếu thời gian hiện tại lớn hơn hoặc bằng thời gian của dòng lyric này...
                 if (currentTime >= ParsedLines[i].Time)
                 {
-                    // ...thì đây có thể là dòng lyric hiện tại.
                     newLyricIndex = i;
                 }
                 else
                 {
-                    // Nếu thời gian hiện tại nhỏ hơn, có nghĩa là ta đã đi qua dòng lyric cần tìm.
-                    // Vì danh sách đã được sắp xếp, ta có thể dừng vòng lặp sớm để tối ưu.
                     break;
                 }
             }
